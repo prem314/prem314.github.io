@@ -1,1 +1,1 @@
-# This is the personal website of Prem Kumar
+# Prem's personal website
