@@ -1,0 +1,38 @@
+/* assets/css/dark-mode.css */
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+header .site-title {
+    color: #e0e0e0;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+}
+
+main {
+    background-color: #121212;
+}
+
+footer {
+    background: #1f1f1f;
+    border-top: 1px solid #333;
+    color: #e0e0e0;
+}
+
+/* Additional styles for links, buttons, and other elements */
+a {
+    color: #bb86fc;
+}
+
+a:hover {
+    color: #ff79c6;
+}
