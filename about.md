@@ -5,7 +5,14 @@ title: About
 
 # About Me
 
+
+**Current Affiliation:**
+PhD student at Institute of Mathematical Sciences, Chennai, working in the field of open quantum systems under the supervision on Prof. Sibasish Ghosh.
+
 **Education:**
   - PhD (2021 - present) : IMSc, chennai
   - MSc (2019 - 2021) : IMSc, chennai. [Link to MSc thesis titled: Dynamics of open quantum Systems: Different approaches to non-Markovianity](https://drive.google.com/file/d/1WXMqmcygDxn_AjsxEjA2ZhBT_xq59dKc/view?usp=sharing)
   - BSc (2016 - 2019) : Christ (Deemed to be University), Bangalore
+
+**Research Interest:**
+My research interest revolves around the theory of open Quantum systems and its application to chemical and biological systems and other many body systems of physical interest. My past research has involved using Feynman path integral approach to derive some analytical results for imaginary time evolution of a open quantum systems strongly interacting with its environment. Currently, I am also looking to study open quantum system in non-negligible coupling limit using perturbation in the system-environment coupling parameter. I also have plans to extend these research to study many-body quantum systems that show robust quantum effects even at ambient environmental conditions.
