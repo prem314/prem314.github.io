@@ -5,4 +5,4 @@ title: Home
 
 # Welcome to Website
 
-This is the homepage of my GitHub Pages site.
+Hi, I am a Grad Student in the Optics and Quantum Information Group, The Institute of Mathematical Sciences. My research interest lies in the theory of Open Quantum Systems.
