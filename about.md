@@ -15,7 +15,12 @@ PhD student at Institute of Mathematical Sciences, Chennai, working in the field
   - BSc (2016 - 2019) : Christ (Deemed to be University), Bangalore
 
 **Research Interest:**
-My research interest revolves around the theory of open Quantum systems and its application to chemical and biological systems and other many body systems of physical interest. My past research has involved using Feynman path integral approach to derive some analytical results for imaginary time evolution of a open quantum systems strongly interacting with its environment. Currently, I am also looking to study open quantum system in non-negligible coupling limit using perturbation in the system-environment coupling parameter. I also have plans to extend these research to study many-body quantum systems that show robust quantum effects even at ambient environmental conditions.
+My research interest revolves around the theory of open Quantum systems and its application to chemical and biological systems and other many body systems of physical interest. My past research has involved
+  - using Feynman path integral approach to derive some analytical results for imaginary time evolution of a open quantum systems strongly interacting with its environment.
+  - Study of open quantum system in non-negligible coupling limit using perturbation in the system-environment coupling parameter.
+
+I have plans to extend these research to study many-body quantum systems that show robust quantum effects even at ambient environmental conditions.
+
 
 **Skills:**
   - Languages: Python, Mathematica, English, Hindi
