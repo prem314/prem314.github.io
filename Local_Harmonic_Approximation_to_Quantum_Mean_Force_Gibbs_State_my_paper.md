@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 # Local Harmonic Approximation to Quantum Mean Force Gibbs State 
 
 ## Quick links
