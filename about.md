@@ -24,3 +24,6 @@ I have plans to extend these research to study many-body quantum systems that sh
 
 **Skills:**
   - Languages: Python, Mathematica, English, Hindi
+
+**Contact Me**
+  - Email: premkr at imsc dot res dot in
