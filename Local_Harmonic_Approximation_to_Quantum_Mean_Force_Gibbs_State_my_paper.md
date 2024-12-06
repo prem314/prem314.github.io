@@ -7,5 +7,5 @@ title: Home
 
 ## Quick links
 
-  - [Arxiv Page](https://arxiv.org/abs/2401.11595v1)
+  - [Arxiv Page](https://doi.org/10.48550/arXiv.2401.11595)
   - [10 min Talk](https://www.youtube.com/watch?v=gHE8q_1FMog)
