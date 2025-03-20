@@ -15,7 +15,9 @@ Assuming that legs of a person weighs 32% of the full body weight. So, if a pers
 On the other hand, if a person does single legged squates, then weight on the leg is $0.84 M$. Equating these two, we get
 
 $$ W/2 + 0.34 M = 0.84 M$$
+
 $$\implies W/2 = 0.5 M$$
+
 $$\implies W = M$$
 
 ## Comments
