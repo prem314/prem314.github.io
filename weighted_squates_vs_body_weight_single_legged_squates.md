@@ -17,3 +17,8 @@ On the other hand, if a person does single legged squates, then weight on the le
 $$ W/2 + 0.34 M = 0.84 M$$
 $$\implies W/2 = 0.5 M$$
 $$\implies W = M$$
+
+## Comments
+  - Single leg squates can also be great for stability and put less load on spine.
+  - Weighted squates can be great to train the spine for load and core strengthening.
+  - Single leg squates appears safer from injuries and does not require equipments.
