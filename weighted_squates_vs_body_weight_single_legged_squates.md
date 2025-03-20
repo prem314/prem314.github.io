@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 # eighted squates vs Body Weight Single legged squates
 
 ## Summary
