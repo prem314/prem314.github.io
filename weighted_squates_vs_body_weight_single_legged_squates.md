@@ -6,7 +6,7 @@ title: Home
 # Weighted squates vs Body Weight Single legged squates
 
 ## Summary
-The load on single leg from body weight single legged squates will be the same as weighted squates if the weight is the latter is *equal* to the weight of the person!
+The load on single leg from body weight single legged squates will be the same as weighted squates if the weight in the latter is *equal* to the weight of the person!
 
 ## Calculation
 
