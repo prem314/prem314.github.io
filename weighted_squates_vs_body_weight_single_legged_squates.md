@@ -10,18 +10,19 @@ The load on single leg from body weight single legged squates will be the same a
 
 ## Calculation
 
-Assume that legs of a person weighs 32% of the full body weight. [^1] So, if a person of mass M is doing weighted squates with W weight, then the total weight on each leg is $(W + 0.68 M)/2$.
+Assume the mass of a person is $M$ and the weight of their both legs is $x M$. Then, if the person does squates with weight $W$, then the weight on single leg will be $(W + (1-x) M)/2$.
 
-On the other hand, if a person does single legged squates, then weight on the leg is $0.84 M$. Equating these two, we get
+If the person does sigle leg body weight squates, then the weight on single leg will be $(1- x/2) M$. Equating these two to find the value of $W$, we get
 
 $$
 \begin{align}
-\frac{W}{2} + 0.34 M &= 0.84 M \\
-\implies \frac{W}{2} &= 0.5 M \\
+\frac{W + (1-x)M}{2} &= (1 - x/2) M \\
+\implies W + (1-x)M &= (2 - x) M \\
 \implies W &= M
 \end{align}
 $$
 
+Surprisingly, the final result does not even depend upon the value of $x$! But following study suggests that $x \approx 0.33$.[^1]
 
 
 ## Comments
