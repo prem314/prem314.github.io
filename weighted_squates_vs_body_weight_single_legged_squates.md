@@ -20,5 +20,6 @@ $$\implies W = M$$
 
 ## Comments
   - Single leg squates can also be great for stability and put less load on spine.
-  - Weighted squates can be great to train the spine for load and core strengthening.
   - Single leg squates appears safer from injuries and does not require equipments.
+  - Weighted squates can be great to train the spine for load and core strengthening.
+
