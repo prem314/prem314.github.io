@@ -22,12 +22,10 @@ $$
 \end{align}
 $$
 
-Surprisingly, the final result does not even depend upon the value of $x$. Neat! But following study suggests that $x \approx 0.33$.[^1]
+Surprisingly, the final result does not even depend upon the value of $x$. Neat! 
 
 
 ## Comments
   - Single leg squates can also be great for stability and put less load on spine.
   - Single leg squates appears safer from injuries and does not require equipments.
   - Weighted squates can be great to train the spine for load and core strengthening.
-
-[^1]: See [Segment weights as percentages of total body weight and trunk segments as a percentage of trunk weight](https://bionumbers.hms.harvard.edu/bionumber.aspx?id=115457&s=n&v=4)
