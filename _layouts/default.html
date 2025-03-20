@@ -7,15 +7,45 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
     <script type="text/javascript">
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        macros: {
+          braket: ["\\langle #1 \\rangle", 1],
+          bra: ["\\langle #1 |", 1],
+          ket: ["| #1 \\rangle", 1],
+          Tilde: ["\\widetilde{#1}", 1],
+          Bar: ["\\overline{#1}", 1],
+          Hat: ["\\hat{#1}", 1],
+          Vec: ["\\vec{#1}", 1],
+          Abs: ["\\left| #1 \\right|", 1],
+          Norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+          Grad: ["\\nabla #1", 1],
+          Div: ["\\nabla \\cdot #1", 1],
+          Curl: ["\\nabla \\times #1", 1],
+          Bold: ["\\mathbf{#1}", 1],
+          Comm: ["\\left[ #1, #2 \\right]", 2],
+          AntiComm: ["\\left\\{ #1, #2 \\right\\}", 2],
+          Tr: "\\operatorname{Tr}",
+          vs: "\\text{ vs }",
+          bm: ["\\boldsymbol{#1}", 1],
+          dag: ["\\dagger"],
+          dket: ["| #1 \\rangle \\rangle", 1],
+          dbra: ["\\langle \\langle #1 |", 1],
+          dbraket: ["\\langle \\langle #1 \\rangle \\rangle", 1],
+          sgn: ["\\text{ sgn}"],
+          csch: ["\\text{csch}"],
+          sech: ["\\text{sech}"],
+          ci: ["\\text{Ci}"]
         }
-      };
+      }
+    };
     </script>
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
+
 <body>
     <header>
         <div class="site-title">
