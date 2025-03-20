@@ -10,7 +10,7 @@ The load on single leg from body weight single legged squates will be the same a
 
 ## Calculation
 
-Assuming that legs of a person weighs 32% of the full body weight. So, if a person of mass M is doing weighted squates with W weight, then the total weight on each leg is $(W + 0.68 M)/2$.
+Assume that legs of a person weighs 32% of the full body weight. [^1] So, if a person of mass M is doing weighted squates with W weight, then the total weight on each leg is $(W + 0.68 M)/2$.
 
 On the other hand, if a person does single legged squates, then weight on the leg is $0.84 M$. Equating these two, we get
 
@@ -29,3 +29,4 @@ $$
   - Single leg squates appears safer from injuries and does not require equipments.
   - Weighted squates can be great to train the spine for load and core strengthening.
 
+[^1]: See [Segment weights as percentages of total body weight and trunk segments as a percentage of trunk weight](https://bionumbers.hms.harvard.edu/bionumber.aspx?id=115457&s=n&v=4)
