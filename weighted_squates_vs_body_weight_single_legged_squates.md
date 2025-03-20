@@ -26,6 +26,15 @@ $$\implies W = M$$
 \implies W &= M
 \end{align}
 
+$$
+\begin{align}
+\frac{W}{2} + 0.34\,M &= 0.84\,M \\
+\implies \frac{W}{2} &= 0.5\,M \\
+\implies W &= M
+\end{align}
+$$
+
+
 
 ## Comments
   - Single leg squates can also be great for stability and put less load on spine.
