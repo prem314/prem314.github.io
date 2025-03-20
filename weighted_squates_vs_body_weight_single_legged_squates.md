@@ -22,7 +22,7 @@ $$
 \end{align}
 $$
 
-Surprisingly, the final result does not even depend upon the value of $x$! But following study suggests that $x \approx 0.33$.[^1]
+Surprisingly, the final result does not even depend upon the value of $x$. Neat! But following study suggests that $x \approx 0.33$.[^1]
 
 
 ## Comments
