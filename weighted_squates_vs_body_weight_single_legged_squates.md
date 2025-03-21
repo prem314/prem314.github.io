@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Article
 ---
 
 # Weighted squates vs Body Weight Single legged squates
