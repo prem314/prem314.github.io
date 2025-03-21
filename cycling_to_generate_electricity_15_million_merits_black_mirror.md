@@ -8,7 +8,7 @@ title: Home
 
 In Black Mirror season 1, episode 2, '15 Million Merits', a dystopian world is shown where the majority of masses are reduced to cycling to generate electricity in return of a digital currency that they can use to afford a livelihood. Let us analyze how this would work out in reality.
 
-The average human consumes about 3000 kcal per day. Since one kcal is 4.2 kJ, this gives us about $1.3 \times 10^7$ J of energy that they work with everyday. Let us call this unit of energy $x$ and try to understand this energy scale means by comparing it with other relevant quantities we are familiar with.
+The average human consumes about 3000 kcal per day. Since one kcal is 4.2 kJ, this gives us about $1.3 \times 10^7$ J of energy that they work with everyday. Let us call this unit of energy $x$ and try to understand what this energy scale means by comparing it with other relevant quantities we are familiar with.
 
 Firstly, 1 kWh is a unit of energy which equals $3.6 \times 10^6$ J. So, $x$ equals about 4 units of energy. Assuming a domestic electricity price of about Rs. 5 per unit in India, this equates a salary of Rs. 20 per day. Way below the minimum wage, and not enough to sustain a living as per present costs.
 
