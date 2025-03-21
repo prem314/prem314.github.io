@@ -24,7 +24,7 @@ On average, 6 units of solar energy is incident per meter square per day on eart
 
 Given the little economic value of making people cycle for a living, the actual reason could be that due to automation, there is no need for a large human workforce. But providing universal basic income could make people lazy. So, why not make them work for it. Plus, it will have health benefits. Capitalism at its peak.
 
-[^1]: https://www.dataforindia.com/access-to-electricity/#:~:text=Household%20consumption%20of%20electricity%20On%20average%2C%20an,conditioning%20unit%20for%20about%202%20hours%20daily "97 units of electricity per month"
-[^2]: https://www.chinimandi.com/retail-prices/ "Rs. 45 per kg"
-[^3]: https://en.wikipedia.org/wiki/Solar_irradiance#On_Earth's_surface "On average, 6 units of solar energy is incident per meter square per day on earth surface, ignoring clouds."
-[^4]: https://en.wikipedia.org/wiki/Solar-cell_efficiency "efficiency of 33%, which is a theoretical limit"
+[^1]: [97 units of electricity per month](https://www.dataforindia.com/access-to-electricity/#:~:text=Household%20consumption%20of%20electricity%20On%20average%2C%20an,conditioning%20unit%20for%20about%202%20hours%20daily)
+[^2]: [Rs. 45 per kg](https://www.chinimandi.com/retail-prices/)
+[^3]: [On average, 6 units of solar energy is incident per meter square per day on earth surface, ignoring clouds.](https://en.wikipedia.org/wiki/Solar_irradiance#On_Earth's_surface)
+[^4]: [efficiency of 33%, which is a theoretical limit](https://en.wikipedia.org/wiki/Solar-cell_efficiency)
