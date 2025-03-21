@@ -22,7 +22,7 @@ On average, 6 units of solar energy is incident per meter square per day on eart
 
 ## Comments
 
-Given the little economic value of making people cycle for a living, the actual reason could be that due to automation, there is no need for a large human workforce. But providing universal basic income could make people lazy. So, why not make them work for it. Plus, it will have health benefits. Capitalism at its peak.
+Given the little economic value of making people cycle for a living, the actual reason could be that due to automation, there is no need for a large human workforce. But providing universal basic income could make people lazy. So, why not make them work for it. Plus, it will have health benefits, so less economic burden. Capitalism at its peak.
 
 [^1]: [97 units of electricity per month](https://www.dataforindia.com/access-to-electricity/#:~:text=Household%20consumption%20of%20electricity%20On%20average%2C%20an,conditioning%20unit%20for%20about%202%20hours%20daily)
 [^2]: [Rs. 45 per kg](https://www.chinimandi.com/retail-prices/)
