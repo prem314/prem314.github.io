@@ -4,7 +4,7 @@ title: Home
 ---
 
 
-# Cycling to generate electricity in '15 million merits', Black Mirror:s1e2
+# Cycling to generate electricity in '15 Million Merits', Black Mirror:S1E2
 
 In Black Mirror season 1, episode 2, '15 Million Merits', a dystopian world is shown where the majority of masses are reduced to cycling to generate electricity in return of a digital currency that they can use to afford a livelihood. Let us analyze how this would work out in reality.
 
