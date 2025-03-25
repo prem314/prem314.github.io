@@ -21,9 +21,9 @@ Now, let's talk a little more about how Gödel did it.
 In order to create the situation of self reference, Gödel first started with mathematically studying the process of doing mathematics! This is called Metamathematics.
 
 Gödel noted that all mathematical claims use some limited set of symbols. But not all collections of symbols are equally meaningful in mathematics. So, he first set up a 'grammar' to rule out grammatically nonsensical collection of symbols. For example, in the following three collection of symbols: 
-  1. $6=7$,
-  1. $14= 7\times 2$ and
-  1. $67/ \times \times 52 \div$,
+  1. '$6=7$',
+  1. '$14= 7\times 2$' and
+  1. '$67/ \times \times 52 \div$',
 
 the first two are grammatically correct, but the first one is false, while second one is true. Whereas, the 3rd collection of symbols is grammatically incorrect! We are only interested in finding out whether collection of symbols that are grammatically correct are also logically correct or not. Hence, from now on, we will call collection of symbols that are grammatically correct as 'statements'.
 
