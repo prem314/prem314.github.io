@@ -7,5 +7,6 @@ title: Home
 Authors: Prem Kumar, K. P. Athulya, Sibasish Ghosh
 ## Quick links
 
+  - [PRB version](https://doi.org/10.1103/PhysRevB.111.115423)
   - [Arxiv Page](https://doi.org/10.48550/arXiv.2411.08869)
   - [Poster](https://drive.google.com/file/d/1D-BdybGXn6Bgxzj81XQSfnoRgz97Prt-/view?usp=sharing)
