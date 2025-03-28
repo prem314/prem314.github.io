@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Weighted squates vs Body Weight Single legged squates
+title: Weighted squat vs Body Weight Single legged squat
 ---
 
 # Weighted squates vs Body Weight Single legged squates
@@ -24,6 +24,13 @@ $$
 
 Surprisingly, the final result does not even depend upon the value of $x$. Neat! 
 
+### Visualization
+
+Clone a person A. Let us name the clone B. Make B stand on shoulder's of A and let A do a squat. Then, the load on one leg of A is equal to half of A's upper body, half of B's upper body and one of B's legs.
+
+Let A do single legged body-weight squat. Weight of A's single leg is half of A's upper body + the other half + weight of his single leg.
+
+The result does not depend upon the weight of legs and upper body in question.
 
 ## Comments
   - Single leg squates can also be great for stability and put less load on spine.
