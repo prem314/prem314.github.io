@@ -12,5 +12,4 @@ title: Hobby
   - [AI and Art](ai_and_art.md)
 
 ## Artwork
-  - [SFW](https://photos.app.goo.gl/xsRixTczV6NqHCU6A)
-  - [NSFW](https://photos.app.goo.gl/i3ZZsY8pHExkkduAA)
+  - [Paintings](https://photos.app.goo.gl/xsRixTczV6NqHCU6A)
