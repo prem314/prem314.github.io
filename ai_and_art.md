@@ -1,4 +1,10 @@
-# Ai and Art
+---
+layout: default
+title: AI and Art
+---
+
+
+# AI and Art
 
 I have 2 things to say.
 
