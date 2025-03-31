@@ -6,8 +6,6 @@ title: AI and Art
 
 # AI and Art
 
-I have 2 things to say.
-
 ## Can AI create art?
 
 First, art is a means to express thoughts. The present day AI cannot have thoughts. This may or may not change in the future. But this means, just like the camera or the brush, AI is currently a tool to express art. Efficient in some scenarios and in some others, not so much.
@@ -29,3 +27,11 @@ You will need to write a novella to be able to generate all possible low res bla
 The reason why AI art is so beautiful because they are used to generate low effort paintings that can be easily described in terms of words. For example, if i prompt, make a ghibli style painting, the output will look good. But this is because Miyazaki did all the heavy lifting and defined what the term 'Ghibli art' means. My prompt is low effort.
 
 And most importantly, in AI art, the map between the input and output is poor. The output is dashing, but is it what you had intended? Try having a clear image in mind and have ai recreate it, and you will need to sweat to achieve it. Not just because the AI tools are not advanced yet. Imagine seeing an image and trying to recreate it by describing it to an expert human artist vs the artist getting to see the image himself. The objective here is to recreate the image as closely as possible and clearly, the first method is less efficient and not because the artist is not intelligent or talented.
+
+## Image to image generation using AI
+
+Since the parameter space of images is not efficiently accessible with words, the future is image prompt to generate images. But the best case scenario, of course, is to be able to communicate directly to the AI through neurons, the way our brain communicates with our hand. Something like neuralink. Use of any intermediatory, like word or image prompt, will lead to loss on the control over the output.
+
+## Conclusion
+
+Using brush, camera, word or image prompt to create images are all different artforms. Different tools. Some tools may become redundant over time.
