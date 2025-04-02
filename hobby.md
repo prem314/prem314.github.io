@@ -10,7 +10,6 @@ title: Hobby
   - [Cycling to generate electricity in '15 million merits', Black Mirror:s1e2](./cycling_to_generate_electricity_15_million_merits_black_mirror.md)
   - [Proof of Godel's incompleteness Theorem](./proof_of_godels_incompleteness_theorem.md)
   - [AI and Art](./ai_and_art.md)
-  - [Important lessons that I have learnt in life](./important_lessons_that_i_have_learnt_in_life.md)
 
 ## Artwork
   - [Paintings](https://photos.app.goo.gl/xsRixTczV6NqHCU6A)
