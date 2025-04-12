@@ -7,7 +7,7 @@ title: About
 
 
 **Current Affiliation:**
-PhD student at Institute of Mathematical Sciences, Chennai, working in the field of open quantum systems under the supervision on Prof. Sibasish Ghosh.
+PhD student at Institute of Mathematical Sciences, Chennai, working in the field of open quantum systems under the supervision of Prof. Sibasish Ghosh.
 
 **Education:**
   - PhD (2021 - present) : IMSc, chennai
