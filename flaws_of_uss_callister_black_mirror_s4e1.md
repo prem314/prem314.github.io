@@ -8,6 +8,7 @@ comments: true
 
 USS Callister (Black Mirror:S4E1 ), despite all of its flaws that I am going to mention, is one of the best sci-fi video (movie? story?) I have seen. This is what makes the flaws harder to handle. There is some significant potential missed here.
 
+## Plot summary
 The plot is amazing and is explored in a beautiful manner. Daly is a socially awkward genius nerd coder who gets sidelined (bullied?) by people technically less capable than him, in a company he cofounded.
 He is the brain behind an immersive online video game which you can play by pasting a small VR chip on your forehead, which transports your senses to the game world.
 But Daly has his own private version of the game, based on a star trek like show that he is obsessed with, inhabited by the copy of the consciousness of all his coulleagues he does not like.
@@ -16,6 +17,8 @@ Daly, the captain of a spaceship, can log in and out of the game anytime he like
 Yet, they play along with the plot and premise of the game because Daly has complete power over them in the game and can make them suffer indefinitely without the suffering killing them.
 This is Daly's way of coping with any his coulleague who he feels has wronged him.
 
+
+## The flaws
 Now getting to the flaws of the episode. Although the repurcussion of the plot is explored beautifully, the story is plagued with LAZY writing, which makes it difficult to take it too seriously. I will give example.
 
   - When Daly creates a copy of a person's consciousness for the game, as I said before, the copied person remembers about their past life uptill the point the copy was made. And how does Daly achieve this? Just from some DNA samples from the person! Now, I can imagine that the DNA may encode how the person will look, although I am dobtful about even this. BUT, DNA simply does not encode the memories of the person. Writing cannot get lazier. They could gave made it logically sound by having Daly replace the personal VR chip of the person in question with a modified one, which sends the estimated weights and biases of the user's neural network to Daly's computer. So, over a couple of days (weeks?) of use, all the terabytes of neural data is slowly transfered to Daly.
