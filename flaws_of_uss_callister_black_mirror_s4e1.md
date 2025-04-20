@@ -7,8 +7,8 @@ title: Flaws of ‘USS Callister’, Black Mirror:S4E1
 
 USS Callister, despite all of its flaws that I am going to mention, is one of the best sci-fi video (movie? story?) I have seen. This is what makes the flaws harder to handle. There is some significant potential missed here.
 
-The plot is amazing and is explored in a beautiful manner. Daly is a socially awkward genius nerd coder gets sidelined (bullied?) by people technically less capable than him, in a company he cofounded.
-He is the brains behind an immersive online video game which you can play by pasting a small chip on your brain, which transports your senses to the game world.
+The plot is amazing and is explored in a beautiful manner. Daly is a socially awkward genius nerd coder who gets sidelined (bullied?) by people technically less capable than him, in a company he cofounded.
+He is the brain behind an immersive online video game which you can play by pasting a small chip on your brain, which transports your senses to the game world.
 But Daly has his own private version of the game, inhabited by the copy of the consciousness of all his coulleagues he does not like.
 His copy of the game is styled in an old star trek like show that he is obsessed with.
 Daly is the captain of a spaceship in the game, the copy of the consciousness of his coulleagues are other characters like crews and enemies of the game.
