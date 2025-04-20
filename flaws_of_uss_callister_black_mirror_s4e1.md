@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Flaws of ‘USS Callister’, Black Mirror:S4E1
+comments: true
 ---
 
 # Flaws of ‘USS Callister’, Black Mirror:S4E1
