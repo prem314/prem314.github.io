@@ -6,7 +6,7 @@ comments: true
 
 # Flaws of ‘USS Callister’, Black Mirror:S4E1
 
-USS Callister (Black Mirror:S4E1 ), despite all of its flaws that I am going to mention, is one of the best sci-fi video (movie? story?) I have seen. This is what makes the flaws harder to handle. There is some significant potential missed here.
+USS Callister (Black Mirror:S4E1), despite all of its flaws that I am going to mention, is one of the best sci-fi video (movie? story?) I have seen. This is what makes the flaws harder to handle. There is some significant potential missed here.
 
 ## Plot summary
 The plot is amazing and is explored in a beautiful manner. Daly is a socially awkward genius nerd coder who gets sidelined (bullied?) by people technically less capable than him, in a company he cofounded.
