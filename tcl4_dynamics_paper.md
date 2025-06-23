@@ -7,6 +7,6 @@ title: Home
 
 ## Quick links
 
-  - [Arxiv Page]([https://arxiv.org/abs/2405.03044](https://arxiv.org/abs/2506.17009))
+  - [Arxiv Page](https://arxiv.org/abs/2506.17009)
 
 
