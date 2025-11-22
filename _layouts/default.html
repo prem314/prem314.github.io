@@ -69,22 +69,5 @@
     <footer>
         <p>&copy; 2024 Prem's Website</p>
     </footer>
-    <script>
-    // Force all site links to open in a new tab for visitors
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('a[href]').forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('#')) return; // keep in-page anchors unchanged
-            link.setAttribute('target', '_blank');
-
-            // Ensure reverse tabnabbing protection stays intact
-            const rel = link.getAttribute('rel') || '';
-            const relParts = new Set(rel.split(/\s+/).filter(Boolean));
-            relParts.add('noopener');
-            relParts.add('noreferrer');
-            link.setAttribute('rel', Array.from(relParts).join(' '));
-        });
-    });
-    </script>
 </body>
 </html>
