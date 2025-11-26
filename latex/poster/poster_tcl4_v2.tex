@@ -1,0 +1,243 @@
+\documentclass{a0poster}
+\usepackage[margin=0cm, paperwidth=90cm, paperheight=120cm]{geometry}
+\usepackage{poster}
+
+% Adjustable text sizing for the poster (edit these to resize everything)
+\newcommand{\posterbodyfontsize}{28} % main text size
+\newcommand{\posterbodybaselineskip}{34}
+\newcommand{\posterheadingfontsize}{38} % mid-level headings
+\newcommand{\posterheadingbaselineskip}{44}
+\newcommand{\postersectionfontsize}{64} % top colored section titles (Abstract, Background, Results, etc.)
+\newcommand{\postersectionbaselineskip}{66}
+\newcommand{\posterbgsubfontsize}{30} % small headings inside Background column text
+\newcommand{\posterbgsubbaselineskip}{34}
+
+\newcommand{\posterheading}[1]{{\fontsize{\posterheadingfontsize}{\posterheadingbaselineskip}\selectfont #1}}
+\newcommand{\postersectiontitle}[1]{{\fontsize{\postersectionfontsize}{\postersectionbaselineskip}\selectfont\textbf{#1}}}
+\newcommand{\bgtitle}[1]{{\fontsize{\posterbgsubfontsize}{\posterbgsubbaselineskip}\selectfont\textbf{#1}}}
+
+% Override colored section box to use adjustable section title size
+\renewcommand{\coloredsection}[3]{%
+    \begin{center}%
+        \begin{tcolorbox}[
+            enhanced,
+            colback=#1,
+            colframe=#1!70,
+            arc=6pt,
+            boxrule=3pt,
+            width=0.6\linewidth,
+            ]
+            \centering
+            \postersectiontitle{#2}\\[3ex]
+            #3 % Content added here
+        \end{tcolorbox}%
+    \end{center}%
+}
+
+\AtBeginDocument{\fontsize{\posterbodyfontsize}{\posterbodybaselineskip}\selectfont}
+
+\begin{document}
+\begin{center}
+    \colorbox{nottblue!100}{%
+        \begin{minipage}[t]{\textwidth} % Adjusted vertical alignment
+            \vspace{0.8em} % Add vertical space
+            \begin{center}
+                {\fontsize{85pt}{85pt}\selectfont\textbf{\textcolor{white}{Asymptotic TCL4 Generator for the Spin-Boson Model: Analytical Derivation and Benchmarking}}}\\[1ex] % Increased font size
+               \Large \textit{\textcolor{white}{ Prem Kumar }}\textsuperscript{\textcolor{white}{1,2}}, \textit{\textcolor{white}{\textbf{K. P. Athulya}}}\textsuperscript{\textcolor{white}{1,2}}, \textit{\textcolor{white}{Sibasish Ghosh}}\textsuperscript{\textcolor{white}{1,2}}\\
+    \textit{\textsuperscript{\textcolor{white}{1}}\textcolor{white}{ Optics \& Quantum Information Group, The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113, India}}\\
+
+    \textit{\textsuperscript{\textcolor{white}{2}}\textcolor{white}{Homi Bhabha National Institute, Training School Complex, Anushakti Nagar, Mumbai 400085, India}}\\
+    
+    \vspace{0em} % Add vertical space
+            \end{center}
+            
+            \begin{center}
+                \begin{tikzpicture}[remember picture,overlay]
+                     \node [anchor=north west, inner sep=0cm] at ([xshift=4cm,yshift=-4cm]current page.north west)
+                    {\includegraphics[width=8cm,height=8cm]{img/imsclogo.png}}; % Adjust position and image
+                    \node [anchor=north east, inner sep=0cm] at ([xshift=-2cm,yshift=-4cm]current page.north east)
+                    {\includegraphics[width=8cm,height=8cm]{img/hbnilogo.jpg}}; % Adjust position and image
+                \end{tikzpicture}
+            \end{center}
+        \end{minipage}
+    }
+\end{center}
+
+\vspace{-0.8cm}
+% Abstract (own banner) + Background (own banner) in a four-column strip
+\noindent
+\begin{minipage}[t]{0.25\textwidth}
+  \coloredsection{vibrantblue!60!white}{Abstract}{}
+  \coloredsubsection{vibrantblue!10!white}{~}{
+   We derive the full fourth-order TCL (TCL4) generator for the spin-boson model (SBM) for arbitrary odd spectral densities and show that the steady state matches the quantum mean-force Gibbs state up to $O(\lambda^2)$. Our results show that the commonly used TCL2 master equation often overestimates non-Markovianity. Benchmarking against analytical results for Ohmic spectral densities and the numerically exact Hierarchical Equations of Motion confirms the accuracy of TCL4. These results offer a general and computationally efficient method for studying steady-state and dynamical properties of a wide class of quantum systems, including semiconductor double quantum dots.
+  }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.72\textwidth}
+  \coloredsection{highlightgreen!60!white}{Background}{}
+  \begingroup
+  \setlength{\columnsep}{1.2cm}
+  \setlength{\leftskip}{0.8cm}
+  \setlength{\rightskip}{2cm}
+  \begin{multicols}{3}
+\begin{center}
+	\posterheading{\textbf{TCL master equation.}}
+\end{center}
+  For a quantum state $\hat{\rho}(t)$, the time-convolutionless (TCL) master equation is
+  \begin{align*}
+      \dot{\hat{\rho}}_S(t) &= \sum_{n=0}^\infty \lambda^{2n} \mathcal{F}^{(2n)}(t)\big[\hat{\rho}(t)\big].
+  \end{align*}
+  The zeroth-order part $\mathcal{F}^{(0)}(t)[\hat{\rho}(t)] = -i [\hat{H}_S, \hat{\rho}(t)]$ gives free evolution, $\mathcal{F}^{(2)}(t)$ is the Bloch–Redfield contribution, and higher even orders add systematic corrections. 
+\columnbreak
+
+
+\begin{center}
+\posterheading{\textbf{Spin-boson model.}}
+\end{center}
+  The Hamiltonian is
+  \begin{equation*}
+     \hat{H}_{SE} = \hat{H}_{S} + \hat{H}_{E} + \hat{H}_{I}, \qquad 
+     \hat{H}_{I} = \lambda \, \hat{A} \otimes \hat{B}.
+  \end{equation*}
+
+  
+
+  Its ingredients are
+  \begin{align*}
+      \hat{H}_{S} &= \tfrac{\Omega}{2}\, \hat{\sigma}_{3},\\
+      \hat{H}_{E} &= \sum_{k} \Big( \tfrac{\hat{p}_{k}^{2}}{2 m_{k}} + \tfrac{1}{2} m_{k} \omega_{k}^{2} \hat{q}_{k}^{2} \Big),\\
+      \hat{A} &= a_{3} \hat{\sigma}_{3} - a_{1} \hat{\sigma}_{1},\\
+      \hat{B} &= \sum_{k} c_{k} \hat{q}_{k}.
+  \end{align*}
+Spectral density: $J(\omega) = \sum_{k} \frac{c_{k}^{2}}{m_{k} \omega_{k}} \, \delta(\omega - \omega_{k}).$
+
+  \columnbreak
+
+
+
+
+\bgtitle{Bloch-vector TCL form.}\\
+  In Bloch-vector notation,
+  \begin{equation*}
+  \dot{\mathbf{v}}(t) = \sum_{n=0}^{\infty} \lambda^{2n} \, F^{(2n)}(t) \, \mathbf{v}(t),
+  \end{equation*}
+  with matrix elements $$F^{(2n)}_{mn}(t) \equiv \operatorname{Tr}\!\{\hat{\sigma}_{m} \, F^{(2n)}(t)[ \hat{\sigma}_{n} ] \}$$. Here $\lambda$ sets the system–environment coupling; $\hat{\sigma}_i$ are Pauli matrices; $m_k,\omega_k,c_k$ are the mass, frequency, and coupling of the $k^{\text{th}}$ mode; and $a_{1},a_{3}$ encode detuning and tunneling.
+
+  \end{multicols}
+  \endgroup
+\end{minipage}
+
+\coloredsection{vibrantblue!50!white}{Results}{}
+
+\begin{multicols}{2} % Two columns
+
+%\coloredsection{highlightgreen!60!white}{Background}{}
+\coloredsubsection{vibrantblue!5!white}{~}{
+\begin{center}
+     \posterheading{\textbf{Application to the Double-Quantum-Dot System}} 
+\end{center}
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\circleicon{blue}]  Dynamics of
+a semiconductor Quantum-Double-Dot (DQD) system, which can be effectively modeled by the SBM. The SBM parameters are related to the DQD physical parameters (detuning $\epsilon$ and inter-dot tunneling $t_c$) as $a_{1} = \frac{2 t_{c}}{\Omega}$, $    a_{3} = \frac{\epsilon}{\Omega}$ and $\Omega^2 = \epsilon^2 + 4 t_c^2$.
+
+\item[\circleicon{blue}] The DQD is coupled to a phononic bath, described by the spectral density
+\end{itemize}
+\begin{equation*}
+  J(\omega) = \gamma \omega \, \left[1-\text{sinc}\left(\frac{\omega}{\omega_c}\right) \right]\, \exp\left\{-\frac{\omega^2}{2\: \omega_{\text{max}}^2}\right\},
+\end{equation*}
+where, we have $\text{sinc}(x) \equiv \sin(x)/x$. The parameter $\omega_{\text{max}}$ serves as the upper cut-off frequency, while $\omega_{c} = c_{s}/d$, where $c_{s}$ is the speed of sound in the substrate and $d$ is the inter-dot distance.
+\vspace{0.5cm}
+\begin{figure}[H]
+    \resizebox{14cm}{10cm}{{\includegraphics{img/Sigma1Plot.pdf}}}
+    \resizebox{14cm}{10cm}{{\includegraphics{img/Sigma2Plot.pdf}}}
+     \resizebox{14cm}{10cm}{{\includegraphics{img/Sigma3Plot.pdf}}}
+    \caption{Evolution of Pauli matrix expectation values (a) $\langle\hat{\sigma}_1(t)\rangle$, (b) $\langle\hat{\sigma}_2(t)\rangle$, and (c) $\langle\hat{\sigma}_3(t)\rangle$ for a DQD system using TCL2 (blue lines) and TCL4 (red lines) master equations. The model parameters are 
+$\epsilon = 1$, $t_c = 0.5$, $\gamma\lambda^2 = 0.4$, $\beta = 1$, 
+$\omega_{\text{max}} = 1$, and $\omega_c = 1$. 
+The initial expectation values are 
+$\langle \hat{\sigma}_1 \rangle = 0$, 
+$\langle \hat{\sigma}_2 \rangle = 0$, and 
+$\langle \hat{\sigma}_3 \rangle = -0.5$.}%
+\end{figure}
+
+
+\begin{center}
+  \color{black}{\posterheading{\textbf{Numerical verification and benchmarking}}}
+\end{center}
+
+\begin{itemize}
+    \item[\circleicon{blue}] We compare TCL2 and TCL4 dynamics with HEOM for the Ohmic spectral density with Drude cutoff case, quantified by the fidelity between $\hat{\rho}_{\text{TCL}}$ and $\hat{\rho}_{\text{H}}$
+    \begin{equation}
+        F(\hat{\rho}_{\text{TCL}}(t), \hat{\rho}_{\text{H}}(t)) = \text{Tr} \sqrt{\sqrt{\hat{\rho}_{\text{H}}(t)} \hat{\rho}_{\text{TCL}}(t) \sqrt{\hat{\rho}_{\text{H}}(t)}}.
+    \end{equation}
+\end{itemize}
+
+\begin{figure}[H]
+    \resizebox{18cm}{15cm}{{\includegraphics{img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf}}}
+    \resizebox{24cm}{14.5cm}{{\includegraphics{img/TCL4Verification.pdf}}}
+    % \resizebox{14cm}{14cm}{{\includegraphics{img/AntiPredifftcl.pdf}}}
+    \caption{These figures plot a) One minus the Fidelity of the system state
+evolved by HEOM and TCL-ME (blue line is TCL2 and red line is TCL4), b)Relative difference between asymptotic TCL4 generator elements for the Ohmic–Drude case, obtained from our general odd-spectral-density result and from specialized calculations, plotted against the number of Matsubara terms..}%
+\end{figure}
+}
+
+%\coloredsection{highlightgreen!60!white}{Background}{}
+\coloredsubsection{vibrantblue!5!white}{~}{
+\begin{center}
+    \posterheading{\textbf{Non-Markovian Effects with TCL4}}
+\end{center}
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\circleicon{blue}] We quantify the non-Markovianity of TCL2 and TCL4 dynamics for the SBM using the BLP measure (Breuer, Laine \& Piilo, 2009) for an Ohmic spectral density with Drude cutoff $J_D(\omega) = \frac{\gamma  \Lambda ^2 \omega }{\Lambda ^2+\omega ^2}$.
+    \item[\circleicon{blue}] The degree of non-Markovianity of dynamics is defined by 
+  \begin{equation*}
+    \mathcal{N}(\Phi) = \max_{\hat{\rho}_{1,2}(0)} \int_{\sigma > 0} dt\, \sigma(t, \hat{\rho}_{1,2}(0)),
+  \end{equation*}
+where $\sigma(t, \hat{\rho}_{1,2}(0)) = \frac{d}{dt} D[\Phi_t(\hat{\rho}_{1}(0)), \Phi_t(\hat{\rho}_{2}(0))]
+$.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{cc}
+        \includegraphics[width=0.48\linewidth]{img/AntiPtcl2lamdaTplot.pdf} &
+        \includegraphics[width=0.48\linewidth]{img/AntiPtcl4lamdaTplot.pdf} \\
+        \includegraphics[width=0.48\linewidth]{img/AntiPredifftcl.pdf} &
+        \includegraphics[width=0.48\linewidth]{img/TCLNormPlot.pdf}
+    \end{tabular}
+    \caption{These figures plot the BLP measure ($N(\Phi)$) as logarithmic color plot calculated using (a) TCL2 and (b) TCL4 as a function of $\Lambda$ and $T$. Part (c) plots the difference between these two quantities ($N(\Phi_{\text{TCL4}})-N(\Phi_{\text{TCL2}})$), while (d) shows the $L_2$ norm ratio $||F^{(4)}||_2/||F^{(2)}||_2$, highlighting the regime where TCL4 remains valid. The black line marks the Markovian regime from the resonance condition. The BLP measure is maximized over $400$ antipodal Bloch sphere pairs.}%
+\end{figure}
+}
+
+\end{multicols}
+
+% Two-column footer: References (left) and Summary (right)
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+  \coloredsection{vibrantblue!60!white}{References}{}
+  \coloredsubsection{vibrantblue!10!white}{~}{
+  \begin{itemize}[leftmargin=0.8em, label={}, itemsep=0.4em, topsep=0pt, parsep=0pt]
+    \item Prem Kumar, K. P. Athulya, \& Sibasish Ghosh. (2025). Equivalence between the second order steady state for the spin-boson model and its quantum mean force Gibbs state. \textit{Phys. Rev. B}, \textbf{111}(11), 115423.
+    \item Prem Kumar, K. P. Athulya, \& Sibasish Ghosh. (2025). Asymptotic TCL4 Generator for the Spin-Boson Model: Analytical Derivation and Benchmarking. \textit{arXiv preprint arXiv:2506.17009}.
+    \item Heinz-Peter Breuer, Elsi-Mari Laine, \& Jyrki Piilo. (2009). Measure for the degree of non-Markovian behavior of quantum processes in open systems. \textit{Phys. Rev. Lett.}, \textbf{103}(21), 210401.
+  \end{itemize}
+  }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \coloredsection{accentorange!80!white}{Summary}{}
+  \coloredsubsection{accentorange!10!white}{~}{
+  \begin{itemize}
+    \item[\circleicon{black}] For Ohmic-Drude spectral density, TCL2 overestimates non-Markovianity across a wide range of $T$ and $\Lambda$.
+    \item[\circleicon{black}] TCL4 is benchmarked against analytical Drude results and exact HEOM, showing closer agreement across tested regimes.
+  \end{itemize}
+  }
+\end{minipage}
+
+
+
+\begin{tikzpicture}[remember picture, overlay]
+    \fill[nottblue] (current page.south west) rectangle ([yshift=2cm]current page.south east);
+\end{tikzpicture}
+\end{document}
