@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.31)  27 NOV 2025 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.31)  27 NOV 2025 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,85 +1021,90 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.72015> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16.80017> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
- \T1/ptm/m/n/28 For a quan-tum state $[]\OT1/ztmcm/m/n/28 (\OML/ztmcm/m/it/28 t
-\OT1/ztmcm/m/n/28 )$\T1/ptm/m/n/28 , the time- 
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+Underfull \hbox (badness 5105) in paragraph at lines 129--129
+ []\T1/ptm/m/n/28 For a quan-tum state $[]\OT1/ztmcm/m/n/28 (\OML/ztmcm/m/it/28
+ t\OT1/ztmcm/m/n/28 )$\T1/ptm/m/n/28 , the time- 
+ []
+
+
+Underfull \hbox (badness 7667) in paragraph at lines 129--129
  \T1/ptm/m/n/28 The zeroth-order part $\OMS/ztmcm/m/n/28 F[]\OT1/ztmcm/m/n/28 (
 \OML/ztmcm/m/it/28 t\OT1/ztmcm/m/n/28 )[[](\OML/ztmcm/m/it/28 t\OT1/ztmcm/m/n/2
 8 )] = 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 <img/Sigma1Plot.pdf, id=44, 416.55624pt x 383.4325pt>
 File: img/Sigma1Plot.pdf Graphic file (type pdf)
 <use img/Sigma1Plot.pdf>
-Package pdftex.def Info: img/Sigma1Plot.pdf  used on input line 183.
+Package pdftex.def Info: img/Sigma1Plot.pdf  used on input line 185.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
 <img/Sigma2Plot.pdf, id=45, 416.55624pt x 383.4325pt>
 File: img/Sigma2Plot.pdf Graphic file (type pdf)
 <use img/Sigma2Plot.pdf>
-Package pdftex.def Info: img/Sigma2Plot.pdf  used on input line 183.
+Package pdftex.def Info: img/Sigma2Plot.pdf  used on input line 185.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
 <img/Sigma3Plot.pdf, id=46, 416.55624pt x 383.4325pt>
 File: img/Sigma3Plot.pdf Graphic file (type pdf)
 <use img/Sigma3Plot.pdf>
-Package pdftex.def Info: img/Sigma3Plot.pdf  used on input line 183.
+Package pdftex.def Info: img/Sigma3Plot.pdf  used on input line 185.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
 <img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf, id=47, 433.62pt 
 x 289.08pt>
 File: img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf Graphic file
  (type pdf)
 <use img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf>
 Package pdftex.def Info: img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1
-.0.pdf  used on input line 183.
+.0.pdf  used on input line 185.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 <img/TCL4Verification.pdf, id=48, 504.88625pt x 286.06876pt>
 File: img/TCL4Verification.pdf Graphic file (type pdf)
 <use img/TCL4Verification.pdf>
-Package pdftex.def Info: img/TCL4Verification.pdf  used on input line 183.
+Package pdftex.def Info: img/TCL4Verification.pdf  used on input line 185.
 (pdftex.def)             Requested size: 504.885pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
 
  []
 
 <img/AntiPtcl2lamdaTplot.pdf, id=49, 260.975pt x 214.8025pt>
 File: img/AntiPtcl2lamdaTplot.pdf Graphic file (type pdf)
 <use img/AntiPtcl2lamdaTplot.pdf>
-Package pdftex.def Info: img/AntiPtcl2lamdaTplot.pdf  used on input line 211.
+Package pdftex.def Info: img/AntiPtcl2lamdaTplot.pdf  used on input line 213.
 (pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
 <img/AntiPtcl4lamdaTplot.pdf, id=50, 260.975pt x 214.8025pt>
 File: img/AntiPtcl4lamdaTplot.pdf Graphic file (type pdf)
 <use img/AntiPtcl4lamdaTplot.pdf>
-Package pdftex.def Info: img/AntiPtcl4lamdaTplot.pdf  used on input line 211.
+Package pdftex.def Info: img/AntiPtcl4lamdaTplot.pdf  used on input line 213.
 (pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
 <img/AntiPredifftcl.pdf, id=51, 287.0725pt x 214.8025pt>
 File: img/AntiPredifftcl.pdf Graphic file (type pdf)
 <use img/AntiPredifftcl.pdf>
-Package pdftex.def Info: img/AntiPredifftcl.pdf  used on input line 211.
+Package pdftex.def Info: img/AntiPredifftcl.pdf  used on input line 213.
 (pdftex.def)             Requested size: 591.0964pt x 442.30142pt.
 <img/TCLNormPlot.pdf, id=52, 260.975pt x 214.8025pt>
 File: img/TCLNormPlot.pdf Graphic file (type pdf)
 <use img/TCLNormPlot.pdf>
-Package pdftex.def Info: img/TCLNormPlot.pdf  used on input line 211.
+Package pdftex.def Info: img/TCLNormPlot.pdf  used on input line 213.
 (pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
 
  []
 
@@ -1148,13 +1153,13 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26923 strings out of 474222
- 578949 string characters out of 5748732
- 1978975 words of memory out of 5000000
- 48698 multiletter control sequences out of 15000+600000
+ 26924 strings out of 474222
+ 578965 string characters out of 5748732
+ 1979975 words of memory out of 5000000
+ 48699 multiletter control sequences out of 15000+600000
  641875 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,15n,110p,716b,1008s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,17n,110p,714b,1008s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -1165,7 +1170,7 @@ l/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on poster_tcl4_v2.pdf (1 page, 754723 bytes).
+Output written on poster_tcl4_v2.pdf (1 page, 754959 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams
