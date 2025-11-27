@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.17)  27 NOV 2025 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.17)  27 NOV 2025 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,7 +865,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/lmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 ))
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 39
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count347
+\c@subtable=\count348
+)
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 41
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -873,20 +878,20 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (./poster_tcl4_v2.aux)
 \openout1 = `poster_tcl4_v2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -924,16 +929,16 @@ LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
+\scratchcounter=\count349
 \scratchdimen=\dimen314
 \scratchbox=\box134
-\nofMPsegments=\count348
-\nofMParguments=\count349
+\nofMPsegments=\count350
+\nofMParguments=\count351
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count350
+\MPscratchCnt=\count352
 \MPscratchDim=\dimen315
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -953,55 +958,55 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count353
+\c@lstlisting=\count355
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 63.
+ 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 63.
+ 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 63.
+ 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 63.
+ 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-3.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
 <img/imsclogo.png, id=41, 144.54pt x 144.54pt>
 File: img/imsclogo.png Graphic file (type png)
 <use img/imsclogo.png>
-Package pdftex.def Info: img/imsclogo.png  used on input line 63.
+Package pdftex.def Info: img/imsclogo.png  used on input line 65.
 (pdftex.def)             Requested size: 227.63402pt x 227.63402pt.
 <img/hbnilogo.jpg, id=43, 228.855pt x 221.82875pt>
 File: img/hbnilogo.jpg Graphic file (type jpg)
 <use img/hbnilogo.jpg>
-Package pdftex.def Info: img/hbnilogo.jpg  used on input line 63.
+Package pdftex.def Info: img/hbnilogo.jpg  used on input line 65.
 (pdftex.def)             Requested size: 227.6322pt x 227.61963pt.
 
-Overfull \hbox (13.0pt too wide) in paragraph at lines 63--64
+Overfull \hbox (13.0pt too wide) in paragraph at lines 65--66
  [][][][][][] 
  []
 
@@ -1018,85 +1023,131 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.72015> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16.80017> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
 
-Underfull \hbox (badness 5105) in paragraph at lines 129--129
- []\T1/ptm/m/n/28 For a quan-tum state $[]\OT1/ztmcm/m/n/28 (\OML/ztmcm/m/it/28
- t\OT1/ztmcm/m/n/28 )$\T1/ptm/m/n/28 , the time- 
- []
-
-
-Underfull \hbox (badness 7667) in paragraph at lines 129--129
- \T1/ptm/m/n/28 The zeroth-order part $\OMS/ztmcm/m/n/28 F[]\OT1/ztmcm/m/n/28 (
-\OML/ztmcm/m/it/28 t\OT1/ztmcm/m/n/28 )[[](\OML/ztmcm/m/it/28 t\OT1/ztmcm/m/n/2
-8 )] = 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
 
  []
 
-<img/Sigma1Plot.pdf, id=44, 416.55624pt x 383.4325pt>
+<img/qr_code_tcl4_2_poster.pdf, id=44, 752.8125pt x 752.8125pt>
+File: img/qr_code_tcl4_2_poster.pdf Graphic file (type pdf)
+<use img/qr_code_tcl4_2_poster.pdf>
+Package pdftex.def Info: img/qr_code_tcl4_2_poster.pdf  used on input line 139.
+
+(pdftex.def)             Requested size: 368.72353pt x 368.73201pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
+
+ []
+
+<img/Sigma1Plot.pdf, id=45, 416.55624pt x 383.4325pt>
 File: img/Sigma1Plot.pdf Graphic file (type pdf)
 <use img/Sigma1Plot.pdf>
-Package pdftex.def Info: img/Sigma1Plot.pdf  used on input line 185.
+Package pdftex.def Info: img/Sigma1Plot.pdf  used on input line 198.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
-<img/Sigma2Plot.pdf, id=45, 416.55624pt x 383.4325pt>
+<img/Sigma2Plot.pdf, id=46, 416.55624pt x 383.4325pt>
 File: img/Sigma2Plot.pdf Graphic file (type pdf)
 <use img/Sigma2Plot.pdf>
-Package pdftex.def Info: img/Sigma2Plot.pdf  used on input line 185.
+Package pdftex.def Info: img/Sigma2Plot.pdf  used on input line 198.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
-<img/Sigma3Plot.pdf, id=46, 416.55624pt x 383.4325pt>
+<img/Sigma3Plot.pdf, id=47, 416.55624pt x 383.4325pt>
 File: img/Sigma3Plot.pdf Graphic file (type pdf)
 <use img/Sigma3Plot.pdf>
-Package pdftex.def Info: img/Sigma3Plot.pdf  used on input line 185.
+Package pdftex.def Info: img/Sigma3Plot.pdf  used on input line 198.
 (pdftex.def)             Requested size: 416.55522pt x 383.43156pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
-<img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf, id=47, 433.62pt 
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 198.
+<img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf, id=48, 433.62pt 
 x 289.08pt>
 File: img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf Graphic file
  (type pdf)
 <use img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1.0.pdf>
 Package pdftex.def Info: img/fidelity_tcl2_tcl4_Nk_32_Md_2_tau_5.0_Lambda_1_T_1
-.0.pdf  used on input line 185.
+.0.pdf  used on input line 198.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-<img/TCL4Verification.pdf, id=48, 504.88625pt x 286.06876pt>
+<img/TCL4Verification.pdf, id=49, 504.88625pt x 286.06876pt>
 File: img/TCL4Verification.pdf Graphic file (type pdf)
 <use img/TCL4Verification.pdf>
-Package pdftex.def Info: img/TCL4Verification.pdf  used on input line 185.
+Package pdftex.def Info: img/TCL4Verification.pdf  used on input line 198.
 (pdftex.def)             Requested size: 504.885pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
 
  []
 
-<img/AntiPtcl2lamdaTplot.pdf, id=49, 260.975pt x 214.8025pt>
+<img/AntiPtcl2lamdaTplot.pdf, id=50, 260.975pt x 214.8025pt>
 File: img/AntiPtcl2lamdaTplot.pdf Graphic file (type pdf)
 <use img/AntiPtcl2lamdaTplot.pdf>
-Package pdftex.def Info: img/AntiPtcl2lamdaTplot.pdf  used on input line 213.
-(pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
-<img/AntiPtcl4lamdaTplot.pdf, id=50, 260.975pt x 214.8025pt>
+Package pdftex.def Info: img/AntiPtcl2lamdaTplot.pdf  used on input line 241.
+(pdftex.def)             Requested size: 587.47374pt x 483.60269pt.
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+<img/AntiPtcl4lamdaTplot.pdf, id=51, 260.975pt x 214.8025pt>
 File: img/AntiPtcl4lamdaTplot.pdf Graphic file (type pdf)
 <use img/AntiPtcl4lamdaTplot.pdf>
-Package pdftex.def Info: img/AntiPtcl4lamdaTplot.pdf  used on input line 213.
-(pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
-<img/AntiPredifftcl.pdf, id=51, 287.0725pt x 214.8025pt>
+Package pdftex.def Info: img/AntiPtcl4lamdaTplot.pdf  used on input line 241.
+(pdftex.def)             Requested size: 587.47374pt x 483.60269pt.
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+<img/AntiPredifftcl.pdf, id=52, 287.0725pt x 214.8025pt>
 File: img/AntiPredifftcl.pdf Graphic file (type pdf)
 <use img/AntiPredifftcl.pdf>
-Package pdftex.def Info: img/AntiPredifftcl.pdf  used on input line 213.
-(pdftex.def)             Requested size: 591.0964pt x 442.30142pt.
-<img/TCLNormPlot.pdf, id=52, 260.975pt x 214.8025pt>
+Package pdftex.def Info: img/AntiPredifftcl.pdf  used on input line 241.
+(pdftex.def)             Requested size: 587.47374pt x 439.59084pt.
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+<img/TCLNormPlot.pdf, id=53, 260.975pt x 214.8025pt>
 File: img/TCLNormPlot.pdf Graphic file (type pdf)
 <use img/TCLNormPlot.pdf>
-Package pdftex.def Info: img/TCLNormPlot.pdf  used on input line 213.
-(pdftex.def)             Requested size: 591.0964pt x 486.58533pt.
+Package pdftex.def Info: img/TCLNormPlot.pdf  used on input line 241.
+(pdftex.def)             Requested size: 587.47374pt x 483.60269pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 2
+41.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--238
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 
  []
 
@@ -1108,7 +1159,8 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> papersize=120cm,91.51cm
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/imsclogo.png> <./img
-/hbnilogo.jpg> <./img/Sigma1Plot.pdf> <./img/Sigma2Plot.pdf
+/hbnilogo.jpg> <./img/qr_code_tcl4_2_poster.pdf> <./img/Sigma1Plot.pdf> <./img/
+Sigma2Plot.pdf
 
 pdfTeX warning: pdflatex (file ./img/Sigma2Plot.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
@@ -1139,13 +1191,13 @@ pdfTeX warning: pdflatex (file ./img/TCLNormPlot.pdf): PDF inclusion: multiple
 pdfs with page group included in a single page
 >] (./poster_tcl4_v2.aux) ) 
 Here is how much of TeX's memory you used:
- 26811 strings out of 476091
- 576259 string characters out of 5794081
- 1907330 words of memory out of 5000000
- 46706 multiletter control sequences out of 15000+600000
- 596093 words of font info for 144 fonts, out of 8000000 for 9000
+ 26927 strings out of 476091
+ 578649 string characters out of 5794081
+ 1911330 words of memory out of 5000000
+ 46820 multiletter control sequences out of 15000+600000
+ 591646 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,17n,110p,729b,1016s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,17n,110p,804b,1014s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/
 8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
@@ -1157,10 +1209,10 @@ symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster_tcl4_v2.pdf (1 page, 754930 bytes).
+Output written on poster_tcl4_v2.pdf (1 page, 899707 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 322 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
