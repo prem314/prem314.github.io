@@ -38,7 +38,8 @@
 
 % Poster settings
 \setlength{\columnsep}{-0.8cm} % Column separation
-\setlength{\parskip}{5ex}
+% Keep blank lines from adding extra vertical space (standard LaTeX behaviour)
+\setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 % \setlength{\oddsidemargin}{-1in} % Adjusted margin (left)
 % \setlength{\evensidemargin}{-5in}  % Adjusted margin (right)
@@ -55,6 +56,7 @@
             arc=6pt,
             boxrule=3pt,
             width=0.6\linewidth,
+            top=10pt,bottom=12pt,left=12pt,right=12pt,boxsep=6pt,
             ]
             \centering
             {\fontsize{50pt}{50pt}\selectfont\textbf{#2}}\\[3ex] % Adjusted font size and vertical space
@@ -74,6 +76,7 @@
             arc=20pt,
             boxrule=3pt,
             width=0.98\linewidth,
+            top=10pt,bottom=12pt,left=12pt,right=12pt,boxsep=6pt,
             ]
             
             {\fontsize{35}{35}\selectfont{#2}}\\[1ex] % Adjusted font size and vertical space
