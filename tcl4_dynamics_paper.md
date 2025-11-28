@@ -8,4 +8,4 @@ title: Home
 ## Quick links
 
   - [Arxiv Page](https://arxiv.org/abs/2506.17009)
-  - [Poster (PDF)](/latex/poster/poster_tcl4_v2.pdf)
+  - [Poster (PDF)](/latex/poster/poster_tcl4_2.pdf)

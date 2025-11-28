@@ -1,0 +1,357 @@
+\documentclass[a0paper,fleqn]{betterportraitposter}
+
+
+% PACKAGES
+\usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black, % color of internal links (sections, pages, etc.)
+  citecolor=black, % color of citations
+  urlcolor=black   % color of URLs
+}
+\renewcommand{\equationautorefname}{Eq.}
+
+
+
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage{braket}
+% Redefine math environments to display all math in red
+
+
+%%%% Uncomment the following commands to customise the format
+
+%% Setting the height of the top and bottom (colored) bars
+%% Uncomment either of the following lines it you want to change the defaults heights of the top or bottom bars.
+%variable that holds the length of the lower bar
+\newcommand{\lowerBarLength}{0.057}
+
+\newcommand{\upperBarLength}{0.089}
+% Custom command
+\newcommand{\Tr}{\operatorname{Tr}}
+
+
+\setlength{\mainfindingheight}{\upperBarLength \paperheight} % Top bar
+\setlength{\bottomboxheight}{\lowerBarLength \paperheight} % Bottom bar
+
+%% Setting the page margin
+
+%% Changing font sizes
+\newlength{\summarytext}
+\setlength{\summarytext}{75pt}
+
+\newlength{\titletext}
+\setlength{\titletext}{72pt}
+
+\newlength{\bodytext}
+\setlength{\bodytext}{24pt}
+
+\newlength{\authortext}
+\setlength{\authortext}{28pt}
+
+\newlength{\headingtext}
+\setlength{\headingtext}{36pt}
+
+
+% Text font
+\renewcommand{\fontsizestandard}{\fontsize{\bodytext}{\dimexpr1.2\bodytext\relax} \selectfont}
+
+% Main column font
+%\renewcommand{\fontsizemain}{\fontsize{112}{140} \selectfont}
+% Step 1: Define a new length \x and set it to 100pt
+
+
+% Step 2: Redefine \fontsizemain to use \x and 1.2*\x for font size and baseline skip
+\renewcommand{\fontsizemain}{%
+  \fontsize{\summarytext}{\dimexpr1.2\summarytext\relax}\selectfont
+}
+
+% Title font
+%\renewcommand{\fontsizetitle}{\fontsize{64}{77} \selectfont}
+\renewcommand{\fontsizetitle}{\fontsize{\titletext}{\dimexpr1.2\titletext\relax} \selectfont}
+
+% Author font
+\renewcommand{\fontsizeauthor}{\fontsize{\authortext}{\dimexpr1.2\authortext\relax} \selectfont}
+
+% Section font
+\renewcommand{\fontsizesection}{\fontsize{\headingtext}{\dimexpr1.2\headingtext\relax} \selectfont}
+
+%% Changing font sizes for a specific text segment
+% Place the text inside brackets:
+% {\fontsize{28}{35} \selectfont Your text goes here}
+
+%% Changing colours
+% Background of main claim box (options include: imperialblue, empirical, theory, methods and intervention
+% Default is empirical
+% \renewcommand{\maincolumnbackgroundcolor}{intervention}
+
+% Font on main and bottom boxes
+% \renewcommand{\maincolumnfontcolor}{empirical}
+
+% You can add a custom RGB color like so (example here is University of Glagow blue):
+
+%change this for color! {1, 35, 57} for blue.
+%\definecolor{MyBlue}{RGB}{100, 35, 57}
+
+\definecolor{MyBlue}{RGB}{0,62,116}
+
+\definecolor{MyBlueDarker}{RGB}{0,39,80}
+
+\renewcommand{\maincolumnbackgroundcolor}{MyBlue}
+
+
+\newcommand{\boldblue}[1]{\textbf{\textcolor{MyBlue}{#1}}}
+
+
+\begin{document}	
+
+
+
+%% Top box with main message
+%\mainfinding{The form of quantum equilibrium state shows universality at strong coupling for anharmonic environment.}
+
+%\mainfinding{Universality in the form of strong coupling quantum equilibrium state as we go to anharmonic environment.}
+
+%\mainfinding{Universality of Strongly Coupled Quantum Equilibrium States for Anharmonic environment}
+
+%\mainfinding{Result: Universality of Strongly Coupled Quantum Equilibrium States upon Anharmonic generalization of the environment}
+
+%\mainfinding{Result: Equilibrium state of a quantum system does not depend upon the details of anharmonic environment it is strongly coupled to.}
+
+
+
+
+
+
+
+
+\bottombox{
+    % Left column: HBNI logo
+    \begin{minipage}[c][\bottomboxheight][c]{0.25\textwidth}
+        \raggedright\bottomboxlogo[height=\lowerBarLength\paperheight]{img/hbni.png}
+    \end{minipage}%
+    % Center column: QR code and smartphone
+    \begin{minipage}[c][\bottomboxheight][c]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.8\bottomboxheight]{img/qrcode.png}\hspace{1em}%
+        \includegraphics[height=0.7\bottomboxheight]{img/smartphoneWhite.png}
+    \end{minipage}%
+    % Right column: IMSc logo
+    \begin{minipage}[c][\bottomboxheight][c]{0.25\textwidth}
+        \raggedleft\bottomboxlogo[height=\lowerBarLength\paperheight]{img/imsclogo.png}
+    \end{minipage}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\mainfinding{Main finding: A quantum system in equilibrium shows universal traits when it is strongly coupled to an anharmonic environment, independent of the details of the environment.}
+
+%\mainfinding{Main result: \textbf{Strong coupling quantum equilibrium state} shows \textbf{robustness} under \textbf{anharmonic generalization} of \textbf{environment}.}
+
+%% Title, author and affiliations section
+\titlebox{
+    \textcolor{MyBlueDarker}{\title{Equivalence between the second order steady state for spin-Boson model and its quantum mean force Gibbs state}}
+    \author{\textbf{Prem Kumar}, K. P. Athulya and Sibasish Ghosh}
+    
+    \institution{\fontsize{28}{35} \selectfont Optics and Quantum Information Group, The Institute of Mathematical Sciences, C.I.T. Campus, Taramani, Chennai 600113, India.}
+    
+    \institution{\fontsize{28}{35} \selectfont Homi Bhabha National Institute, Training School Complex, Anushakti Nagar, Mumbai 400094, India}
+    }
+% End of title stuff
+    
+
+
+
+
+%% Central box with traditional content
+\centerbox{ \begin{multicols}{3}
+
+\section{\textcolor{MyBlue}{Motivation}}
+\begin{enumerate}
+    \item When the coupling of a quantum system to its environment is non-negligible, its steady-state (SS) is known to deviate from the textbook Gibbs state.
+    \item The \boldblue{Bloch-Redfield} (BR) \boldblue{master equation} (ME), widely adopted to solve the open quantum dynamics, cannot predict all corrections of the SS from the Gibbs state.
+\end{enumerate}
+
+
+
+
+
+\section{\textcolor{MyBlue}{Results}}
+\begin{enumerate}
+    \item For a generic \boldblue{spin-Boson model} (SBM), we use a 4th order ME (in system-environment (SE) coupling strength) to calculate all the corrections to the SS \cite{kumar2024equivalence}.
+    \item  This SS is identical to the \boldblue{generalized} second order \boldblue{equilibrium state}, defined as
+    \begin{equation}\label{eqn_mfgs_defn}
+    \hat{\rho}_{eq} = \Tr_E Z^{-1} e^{- \beta \hat{H}_{SE}},
+    \end{equation}
+    where $\hat{H}_{SE}$ is the full SE Hamiltonian, $Z$ is a normalization constant and $\beta$ is the inverse temperature of the environment.
+\end{enumerate}
+
+\section{\textcolor{MyBlue}{Spin-Boson model}}
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{img/spin_boson_model.pdf}
+\end{center}
+The SBM consists of a two level quantum system interacting with large number of harmonic oscillators, where the oscillators are initially in their respective Gibbs state. The Hamiltonian is given as $\hat{H}_{SE} = \hat{H}_S + \hat{H}_E + \hat{H}_I$, where, $\hat{H}_S$ and $\hat{H}_E$ are the system and environment free Hamiltonian, respectively, given as
+\begin{align}
+    \hat{H}_S &\equiv \frac{\Omega}{2} \hat{\sigma}_3,\label{eqn_sb_hamiltonian}\\
+    \hat{H}_E &= \sum_k\left[\frac{\hat{p}_k^2}{2 m_k}+\frac{1}{2} m_k \omega_k^2 \hat{q}_k^2\right],
+\end{align}
+and $\hat{H}_I$ is the SE interaction Hamiltonian, given as,
+\begin{align}
+    \hat{H}_I &= \lambda \hat{A} \otimes \hat{B},
+\end{align}
+where $\lambda$ is a dimensionless SE coupling parameter, and $\hat{A}$ and $\hat{B}$ are system and environment operators, respectively, with
+\begin{align}
+    \hat{A} &= a_3 \hat{\sigma}_3 - a_1 \hat{\sigma}_1, \label{eqn_spin_boson_A}\\
+    \hat{B} &= \sum_k c_k \hat{q}_k.\label{eqn_spin_boson_B}
+\end{align}
+Here, $\hat{\sigma}_i$ is the Pauli matrix. Also, $\hat{p}_k$ and $\hat{q}_k$ are the momentum and position operators of the $k$th Bosonic oscillator with mass $m_k$, frequency $\omega_k$ and SE coupling strength $c_k$. Then the spectral density is defined as
+\begin{equation}\label{eqn_spectral_density_definition}
+    J(\omega) = \sum_k \frac{c_k^2}{m_k \omega_k}\delta(\omega - \omega_k).
+\end{equation}
+
+\section{\textcolor{MyBlue}{TCL master equation}}
+For a quantum state $\hat{\rho}(t)$, the time-convolutionless (TCL) ME has the following form
+\begin{align}\label{eqn_TCL}
+    \dot{\hat{\rho}}_S(t) &= \sum_{n=0}^\infty \lambda^{2n} \mathcal{F}^{(2n)}(t) [\hat{\rho}(t)].
+\end{align}
+Here, $\mathcal{F}^{(0)}(t) [\hat{\rho}(t)] = -i [\hat{H}_S, \hat{\rho}(t)]$ is the free Hamiltonian part, $\mathcal{F}^{(2)}(t)$ is the familiar BR-ME part and the higher order terms correspond to corrections to the BR-ME. The SS of the TCL-ME can then be calculated perturbatively by solving the following equation
+\begin{align}\label{eqn_TCl_steady_state_perturbative}
+\left( \mathcal{F}^{(0)} + \lambda^2 \mathcal{F}^{(2)} + ... \right) [\hat{\rho}^{(0)} + \lambda^2 \hat{\rho}^{(2)} + ...] = 0.
+\end{align}
+Here, $\hat{\rho}^{(0)}$ is the Gibbs state and the higher order terms are corrections over it.
+
+
+
+
+\section{\textcolor{MyBlue}{Why TCL4?}}
+
+The zeroth order TCL generator, $\mathcal{F}^{(0)}$, is degenerate for any state diagonal in Hamiltonian basis. Hence, higher order perturbation theory is required to determine the corrections to the diagonal elements in the SS \cite{thingna2012generalized}.
+
+\section{\textcolor{MyBlue}{Existing results}}
+
+Under the assumption that the expression for the coherences can be analytically continued to the diagonal population, Thingna et al. \cite{thingna2012generalized} obtained the full second order SS. Using a more direct method, TCL4-ME was used to obtain this result, for example, for a SBM assuming Ohmic spectral density in large cutoff limit \cite{PhysRevB.71.035318} or in the zero temperature limit \cite{crowder2024invalidation}.
+
+\section{\textcolor{MyBlue}{Results: Details}}
+
+In our work, for a SBM and quite general class of spectral densities (i.e., for all $J(\omega)$ that can be analytically continued such that we have $J(-\omega) = -J(\omega)$) and arbitrary temperature, we use a TCL4-ME to analytically calculate all the second-order corrections to the SS and show its equivalence to the generalized equilibrium state (\autoref{eqn_mfgs_defn}). Our results also serve as a validation of the analytical continuation hypothesis used by Thingna et al. \cite{thingna2012generalized}
+
+\section{\textcolor{MyBlue}{Example: Double-Quantum-Dot}}
+\begin{center}
+    \includegraphics[width=0.6\columnwidth]{img/dqd.png}
+\end{center}
+The above figure shows (a) symbolic diagram and (b-c) scanning electron micrograph of a solid-state \boldblue{double-quantum-dot} (DQD) \cite{RevModPhys.79.1217}, which, under some physical assumption, can be studied as a generic SBM \cite{purkayastha2020tunable}. To do this, we reinterpret the model parameters of the generic SBM (\autoref{eqn_sb_hamiltonian} - \autoref{eqn_spin_boson_B}) as $a_{1} = \epsilon/\Omega$, $a_{3} = 2 t_{c}/\Omega$ and $\Omega^2 = \epsilon^2 + 4 t_c^2$. Here, the parameters $\epsilon$ and $t_{c}$ correspond to the detuning energy and inter dot tunneling, respectively.
+The following spectral density (\autoref{eqn_spectral_density_definition})
+\begin{align}\label{eqn_sinc_spectral_density}
+  J(\omega) = \gamma \omega \, \left[1-\text{sinc}\left(\frac{\omega}{\omega_c}\right) \right]\, \exp\left\{-\frac{\omega^2}{2\: \omega_{\text{max}}^2}\right\},
+\end{align}
+provides an accurate description of bulk acoustic phonons in GaAs DQDs \cite{purkayastha2020tunable}. Here, we have $\text{sinc}(x) \equiv \sin(x)/x$ and the frequency $\omega_{\text{max}}$ denotes the upper cut-off frequency, while $\omega_{c} = c_{s}/d$, with $c_{s}$ being the speed of sound in the substrate and 
+$d$ is the inter-dot distance. The quantity $\lambda^2 \gamma$ governs the coupling strength between the quantum dots and the phonon bath.
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{img/sscoh.pdf}
+\end{center}
+In the above figure, coherences of the solid-state DQD system are plotted using TCL2-ME as a function of time for a non-zero detuning. The initial state is fixed as $\langle\hat{\sigma}_{1}(0)\rangle = 0 $, $\langle\hat{\sigma}_{2}(0)\rangle = 0 $,  and $\langle\hat{\sigma}_{3}(0)\rangle = 0 $. The parameters are set as  $\epsilon = 1$, $t_c = 0.5$, $\lambda^2 \gamma = 1.44 \times 10^{-2} $, $\omega_{max} = 8$, $\beta =1$ and $\omega_c = 1$. The black dashed line represents the value coming from the generalized Gibbs state. We note that TCL2-ME adequately captures the second order corrections to the coherences in the SS. We also observe the presence of SS coherence for $\hat{\sigma}_{1}(t)$.
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{img/sspop.pdf}
+\end{center}
+The above figure plots the diagonal population for the same system. Dotted green line is the value of the generalized Gibbs state. The dotted red line represents the second order correction from TCL4.
+
+
+\section{\textcolor{MyBlue}{Technical details}}
+The coefficients of the TCL4 generator involve a 5 dimensional integrals (3 in time variables and 2 in frequency) in large time limit. The expression for one such coefficient, for example, is as following
+\begin{align}
+&\lim_{t\to \infty} \Tr\{\hat{\sigma}_3 . \mathcal{F}^{(4)}(t) [\hat{\sigma}_0]\} = \lim_{t\to \infty} 8 a_1^2  \int_0^{t} dt_1 \int_0^{t_1} dt_2 \int_0^{t_2} dt_3 \bigg\{ \notag\\[6pt]
+&a_1^2 \bigg[\eta \left(t_1 - t_2\right)\nu \left(t - t_3\right)\notag\\
+&\qquad \times \bigg(\sin\big((t + t_1 - t_2 - t_3)\Omega\big)- \sin\big((t - t_1 + t_2 - t_3)\Omega\big)\bigg) \notag\\[6pt]
+&\quad + 2 \eta \left(t_1 - t_3\right)\nu \left(t - t_2\right)\sin\big((t_1 - t_2)\Omega\big)\cos\big((t - t_3)\Omega\big) \notag\\[6pt]
+&\quad - 2 \eta \left(t - t_3\right)\nu\left(t_1 - t_2\right)\sin\big((t_2 - t_3)\Omega\big)\cos\big((t - t_1)\Omega\big)\bigg] \notag\\[6pt]
+&+ 2 a_3^2 \bigg[\eta(t_1 - t_3)\nu(t - t_2)\big(\sin((t - t_2)\Omega)-\sin((t - t_1)\Omega)\big) \notag\\[6pt]
+&\quad + \eta(t - t_3)\nu(t_1 - t_2)\big(\sin((t - t_2)\Omega)-\sin((t - t_3)\Omega)\big) \notag\\[6pt]
+&\quad + \eta(t_1 - t_2)\nu(t - t_3)\big(\sin((t - t_2)\Omega)-\sin((t - t_1)\Omega)\big)\bigg]
+\bigg\}.\label{eqn_b34_triple_integral}
+\end{align}
+Here, $\nu(t) = \int_0^\infty d\omega f(\omega ) \cos (t \omega )$ and $\eta(t) = -\int_0^\infty d\omega J(\omega ) \sin (t \omega )$ are the real and imaginary part of the environment's two point correlation function, $\braket{\hat{B}, \hat{B}(-t)}$, and we have defined $f(\omega) \equiv J(\omega ) \coth(\beta \omega/2)$.
+
+The triple time integral can be easily evaluated using MATHEMATICA. The remaining integrand is expressed as a sum over several terms. Interestingly, we found that although it does not matter which variable, between $\omega_1$ and $\omega_2$, we choose to integrate first, we must do it consistently for each term.
+
+For example, for a simplified version of the problem, one such problematic term looked as following
+\begin{equation}
+    g(\omega_1, \omega_2) \equiv \frac{\omega _2 \Omega  f\left(\omega _1\right) f\left(\omega _2\right) e^{i t \omega _2} \left(-\omega _2 \sin (t \Omega )-i \Omega  \cos (t \Omega )\right)}{2 \left(\omega _1^2-\omega _2^2\right) \left(\Omega ^2-\omega _1^2\right) \left(\Omega ^2-\omega _2^2\right)}
+\end{equation}
+Then, let $I_{x,y} \equiv \int_{-\infty}^\infty dy \int_{-\infty}^\infty dx g(x, y)$.
+Then, we have
+\begin{equation}
+    I_{\omega_2, \omega_1} - I_{\omega_1, \omega_2} = -\frac{\pi ^2 f(\Omega )^2 (\sin (2 t \Omega )-2 t \Omega )}{8 \Omega }
+\end{equation}
+which is divergent in large time limit.
+As a toy problem, consider $g(x,y) = e^{i x}/(x^2 - y^2)$. Then $I_{y,x} - I_{x,y} = \pi^2$.
+
+\section{\textcolor{MyBlue}{Challenges and future directions}}
+
+Analytic evaluation of the higher order TCL generators is known to be complicated. Our results are hence an important step in the perturbative evaluation of the TCL-ME.
+
+It is unknown for what range of parameters the SS corresponds to the generalized equilibrium state. In fact, at $T=0$, even violation of this correspondence has been reported \cite{crowder2024invalidation}. It would be interesting to study this phenomenon at finite temperature with the help of analytical expressions for a generic TCL4 generator for the SBM. 
+
+{
+\fontsize{18}{22}\selectfont
+\begin{thebibliography}{9}
+\bibitem{kumar2024equivalence}
+P.~Kumar, K. P. Athulya and S.~Ghosh, \textit{arXiv preprint:2411.08869}, 2024.
+\bibitem{thingna2012generalized}
+J.~Thingna, J.-S.~Wang, and P.~Hänggi, \textit{J. Chem. Phys.}, vol.~136, 2012.
+\bibitem{PhysRevB.71.035318}
+D.~P.~DiVincenzo and D.~Loss, \textit{Phys. Rev. B}, vol.~71, 2005.
+\bibitem{crowder2024invalidation}
+E.~Crowder, L.~Lampert, G.~Manchanda, B.~Shoffeitt, S.~Gadamsetty, Y.~Pei, S.~Chaudhary, and D.~Davidović, \textit{Phys. Rev. A}, vol.~109, 2024.
+\bibitem{RevModPhys.79.1217}
+R.~Hanson, L.~P.~Kouwenhoven, J.~R.~Petta, S.~Tarucha, and L.~M.~K.~Vandersypen, \textit{Rev. Mod. Phys.}, vol.~79, 2007.
+\bibitem{purkayastha2020tunable}
+A.~Purkayastha, G.~Guarnieri, M.~T.~Mitchison, R.~Filip, and J.~Goold, \textit{npj Quantum Inf.}, vol.~6, 2020.
+\end{thebibliography}
+}
+
+\end{multicols}
+
+}
+
+% This curly braket marks the end of central box
+
+
+
+
+% End of bottom box
+
+
+%\qrcode{img/qrcode}{img/smartphoneWhite}{
+%\textbf{Take a picture} to
+%\\download the full paper
+%}
+
+
+%% Compact QR code (comment the previous command and uncomment this one to switch)
+%\compactqrcode{img/qrcode}{
+%\textbf{Take a picture} to
+%\\download the full paper
+%}
+
+%}
+
+
+\mainfinding{Corrections to the steady-state is analytically calculated for a qubit interacting with an environment made up of harmonic oscillators.}
+
+\end{document}
