@@ -1,0 +1,382 @@
+\documentclass[a0paper,fleqn]{betterportraitposter}
+
+
+% PACKAGES
+\usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black, % color of internal links (sections, pages, etc.)
+  citecolor=black, % color of citations
+  urlcolor=black   % color of URLs
+}
+\renewcommand{\equationautorefname}{Eq.}
+
+
+
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage{braket}
+% Redefine math environments to display all math in red
+
+
+%%%% Uncomment the following commands to customise the format
+
+%% Setting the height of the top and bottom (colored) bars
+%% Uncomment either of the following lines it you want to change the defaults heights of the top or bottom bars.
+%variable that holds the length of the lower bar
+\newcommand{\lowerBarLength}{0.1}
+
+\newcommand{\upperBarLength}{0.16}
+
+
+
+\setlength{\mainfindingheight}{\upperBarLength \paperheight} % Top bar
+\setlength{\bottomboxheight}{\lowerBarLength \paperheight} % Bottom bar
+
+%% Setting the page margin
+
+%% Changing font sizes
+
+% Text font
+\renewcommand{\fontsizestandard}{\fontsize{25}{30} \selectfont}
+
+% Main column font
+%\renewcommand{\fontsizemain}{\fontsize{112}{140} \selectfont}
+\renewcommand{\fontsizemain}{\fontsize{100}{120} \selectfont}
+
+% Title font
+%\renewcommand{\fontsizetitle}{\fontsize{64}{77} \selectfont}
+\renewcommand{\fontsizetitle}{\fontsize{53}{64} \selectfont}
+
+% Author font
+\renewcommand{\fontsizeauthor}{\fontsize{28}{35} \selectfont}
+
+% Institution font
+\renewcommand{\fontsizeauthor}{\fontsize{28}{35} \selectfont}
+
+% Section font
+\renewcommand{\fontsizesection}{\fontsize{40}{48} \selectfont}
+
+%% Changing font sizes for a specific text segment
+% Place the text inside brackets:
+% {\fontsize{28}{35} \selectfont Your text goes here}
+
+%% Changing colours
+% Background of main claim box (options include: imperialblue, empirical, theory, methods and intervention
+% Default is empirical
+% \renewcommand{\maincolumnbackgroundcolor}{intervention}
+
+% Font on main and bottom boxes
+% \renewcommand{\maincolumnfontcolor}{empirical}
+
+% You can add a custom RGB color like so (example here is University of Glagow blue):
+
+%change this for color! {1, 35, 57} for blue.
+%\definecolor{MyBlue}{RGB}{100, 35, 57}
+
+\definecolor{MyBlue}{RGB}{0,62,116}
+
+\definecolor{MyBlueDarker}{RGB}{0,39,80}
+
+\renewcommand{\maincolumnbackgroundcolor}{MyBlue}
+\renewcommand{\institutefontcolor}{gray}
+\renewcommand{\authorfontcolor}{gray}
+
+
+
+
+\begin{document}	
+
+\begin{comment}
+
+Things to add
+\begin{enumerate}
+    \item Remove text from this document.
+    \item Start adjusting stuff around, optimizing space, if at all, only when you have removed all the rubbish from the poster.
+    \item Do not overdo things. Avoid OCD. Better things to do. Just get done with this.
+    \item Add the other plot.
+    \item make the poster less verbose. Remove words like 'as shown in figure'. Get to the point.
+    \item add colors to the figures.
+\end{enumerate}
+    
+\end{comment}
+
+%% Top box with main message
+%\mainfinding{The form of quantum equilibrium state shows universality at strong coupling for anharmonic environment.}
+
+%\mainfinding{Universality in the form of strong coupling quantum equilibrium state as we go to anharmonic environment.}
+
+%\mainfinding{Universality of Strongly Coupled Quantum Equilibrium States for Anharmonic environment}
+
+%\mainfinding{Result: Universality of Strongly Coupled Quantum Equilibrium States upon Anharmonic generalization of the environment}
+
+%\mainfinding{Result: Equilibrium state of a quantum system does not depend upon the details of anharmonic environment it is strongly coupled to.}
+
+\mainfinding{Main finding: The \textbf{equilibrium state} of a \textbf{quantum system}, \textbf{strongly coupled} with an \textbf{anharmonic environment}, shows \textbf{universal traits} independent of the details of the environment. }
+
+%\mainfinding{Main finding: A quantum system in equilibrium shows universal traits when it is strongly coupled to an anharmonic environment, independent of the details of the environment.}
+
+%\mainfinding{Main result: \textbf{Strong coupling quantum equilibrium state} shows \textbf{robustness} under \textbf{anharmonic generalization} of \textbf{environment}.}
+
+%% Title, author and affiliations section
+\titlebox{
+    \textcolor{MyBlueDarker}{\title{Ultrastrong coupling limit to quantum mean force Gibbs state for anharmonic environment}}
+    %\author{Prem Kumar and Sibasish Ghosh}
+    
+    %\institution{\fontsize{28}{35} \selectfont The Institute of Mathematical Sciences, Chennai}
+    
+    %\institution{\fontsize{28}{35} \selectfont Homi Bhabha National Institute, Mumbai, India}
+    }
+% End of title stuff
+    
+
+
+
+
+%% Central box with traditional content
+\centerbox{ \begin{multicols}{3}
+
+\section{\textcolor{MyBlue}{Motivation}}
+\begin{enumerate}
+    \item \textbf{\textcolor{MyBlue}{Generalized equilibrium state}} of a quantum system deviates from the textbook Gibbs state at non-negligible \textcolor{MyBlue}{\textbf{system-environment (SE) coupling}} \cite{trushechkin2022open}.
+    \item The analytical expression for this state for harmonic environment model with large SE coupling is known \cite{ankerhold2003phase, cresser2021weak}.
+    \item However, the harmonic environment assumption is not always accurate \cite{bramberger2020dephasing}. The present work generalizes this result to more general SE models \cite{kumar2024Ultrastrong}.
+\end{enumerate}
+
+
+
+
+
+\section{\textcolor{MyBlue}{Results}}
+\begin{enumerate}
+    \item The expression for the generalized equilibrium state remains unchanged even after significant \textcolor{MyBlue}{\textbf{anharmonic generalization}} of the environment.
+    \item For an even larger class of SE models, although the state deviates from the harmonic result, the basis in which it diagonalizes remains unchanged.
+\end{enumerate}
+
+
+
+
+
+
+\section{\textcolor{MyBlue}{The harmonic environment model}}
+\begin{center}
+    \includegraphics[width=0.6\columnwidth]{img/cl_model.pdf}
+\end{center}
+This model involves a quantum system coupled to many uncoupled harmonic oscillators.
+The full SE Hamiltonian is given as $\hat{H}_{\mathrm{SE}} = \hat{H}_S + \hat{H}_{\bar{S}}$, where $\hat{H}_S$ is the free system Hamiltonian and
+\begin{equation}
+	\hat{H}_{\bar{S}} = \sum_k\left[\frac{\hat{p}_k^2}{2 m_k} + \frac{1}{2} m_k \omega_k^2\left(\hat{q}_k- \alpha_k \hat{A}\right)^2 \right]. \label{eqn_CL_hamiltonian}
+\end{equation}
+Here, $\hat{p}_k$ and $\hat{q}_k$ are the momentum and position operator of the $k$th environment particle, and $\hat{A}$ is a system operator.
+
+
+
+
+
+\section{\textcolor{MyBlue}{Generalized equilibrium state}}
+
+Generalized equilibrium state of a system, given the SE Hamiltonian $\hat{H}_{\text{SE}}$ at inverse temperature $\beta$, is formally defined as:
+\begin{equation}
+	\hat{\rho}_{eq} = Z^{-1}\text{Tr}_{E}\left[ e^{-\beta \hat{H}_{\text{SE}}}\right].
+\end{equation}
+The following image plots the equilibrium state, $\rho(x,y)$, for a harmonic oscillator in position basis (which is known exactly for arbitrary SE coupling), as we increase the coupling strength (from left to the right image).
+\begin{center}
+\includegraphics[width= \columnwidth]{img/ho_mfgs.pdf} 
+\end{center}
+
+
+\columnbreak
+
+
+
+
+
+\section{\textcolor{MyBlue}{Strong coupling equilibrium state}}
+
+The \textcolor{MyBlue}{\textbf{strong coupling (SC) limit}} is defined as $\lim \alpha_k \to \infty$ and the corresponding equilibrium state has been recently determined to be \cite{cresser2021weak}
+\begin{equation}
+\hat{P}_i\hat{\rho}_{\text{SC}} \hat{P}_j = Z^{-1} \delta(i,j)  \exp \left\{ -\beta \hat{P}_i \hat{H}_S \hat{P}_i\right\} \label{eqn_GCL2_MFGS},
+\end{equation}
+where $\hat{P}_i$ is the projection operator on the $i$th degenerate subspaces of $\hat{A}$ ($\hat{P}_i$ being 1D projectors in the case of no degeneracy).
+
+
+
+
+
+\section{\textcolor{MyBlue}{Why anharmonic environment model?}}
+
+The harmonic environment model is known to fail for many physical setups, for example, in the case of \textcolor{MyBlue}{\textbf{electron transfer}} happening in the presence of 
+\begin{enumerate}
+    \item strongly coupled \textcolor{MyBlue}{\textbf{low-frequency intramolecular modes}}, or,
+    \item an environment consisting of \textcolor{MyBlue}{\textbf{nonpolar liquids}} (see, for example, \cite{bramberger2020dephasing}).
+\end{enumerate}
+
+
+
+
+
+\section{\textcolor{MyBlue}{Generalization: GCL2 Model}}
+
+If we generalize \autoref{eqn_CL_hamiltonian} as following \cite{Wang_2019}
+\begin{equation}
+\hat{H}_{\bar{S}} = \sum_k\left[\frac{\hat{p}_k^2}{2 m_k} + U_k(\hat{q}_k- \alpha_k \hat{A}) \right], \label{eqn_GCL2}
+\end{equation}
+then, under some physical assumption on the interaction potential $U_k(x)$, we prove that the SC equilibrium state (\autoref{eqn_GCL2_MFGS}) \textcolor{MyBlue}{\textbf{remains unchanged}}!
+\begin{center}
+\includegraphics[width =  \columnwidth]{img/trace_distance_vs_coupling_strength.pdf}
+\end{center}
+This figure plots, for a specific qutrit system, the trace distance between the SC equilibrium state proposed here and the numerically evaluated equilibrium state as a function of the coupling strength, for $U_k(x) = \sum_{n=1}^3 a_{2n} x^{2n}$ in \autoref{eqn_GCL2}. We note that the trace distance vanishes in the large coupling limit, irrespective of the form of $U_k(x)$.
+
+
+
+
+
+\textcolor{MyBlue}{\textbf{Intuitive Proof:}} In the path integral approach, \autoref{eqn_GCL2} gives rise to the following action
+\begin{equation}
+S_k = \int_0^\beta dt \bigg\{ \frac{m_k}{2} \dot{q}_k(t)^2 + U_k(q_k(t) - \alpha_k A(t))\bigg\}. \label{eqn:CL environment action}
+\end{equation}
+In the SC limit ($\alpha_k \to \infty$), small variations in $A(t)$ cause large changes in the argument of $U_k(x)$, giving rise to large potential energy cost to that path, unless we have $q_k(t) \approx \alpha_k A(t)$. But, in the latter case, the kinetic energy cost ($m_k\dot{q}_k(t)^2/2$) of that path blows up instead. Either way, in SC limit, $A(t)= \text{constant}$ is intuitively imposed, which leads to the SC equilibrium state (\autoref{eqn_GCL2_MFGS}). See the paper for the detailed proof \cite{kumar2024Ultrastrong}.
+
+
+
+
+\section{\textcolor{MyBlue}{Further Generalizations: GCL Model}}
+
+If we further generalize \autoref{eqn_CL_hamiltonian} as following,
+\begin{equation}
+\hat{H}_{\bar{S}} = \sum_k\left[\frac{\hat{p}_k^2}{2 m_k} + V_k(\hat{q}_k, \alpha_k \hat{A}) \right],
+\end{equation}
+then, under some physically motivated assumptions on the form of $V_k(x,y)$, we find that although the form of the equilibrium state does change to
+
+
+\columnbreak
+
+
+\begin{equation}
+\hat{P}_i\hat{\rho}_{\text{SC}} \hat{P}_j = Z^{-1} \delta(i,j) \exp \left\{ -\beta \hat{P}_i \hat{H}_S \hat{P}_i\right\} \text{Tr} e^{-\beta \hat{H}_I(A_i)},
+\end{equation}
+it still \textcolor{MyBlue}{\textbf{diagonalizes in the basis of $\hat{A}$}}. Here, the only difference being the extra $A_i$ dependent factor $\text{Tr} e^{-\beta \hat{H}_I(A_i)}$, where $A_i$ is the eigenvalue of $\hat{A}$ corresponding to $\hat{P}_i$.
+
+
+
+
+
+
+
+
+\section{\textcolor{MyBlue}{Zwanzig Model}}
+
+For a different class of SE model with $\hat{H}_{\bar{S}}$ given as \cite{Banerjee_2002}
+\begin{equation}
+\hat{H}_{\bar{S}} = \sum_{k=1}^N\left[ \frac{\hat{p}_k^2}{2 m_k} + U_k^{\text{free}}(\hat{q}_k) + \frac{\alpha_k}{2} U_k(\hat{q}_k - \hat{A}) \right] \label{eqn_new_spring_model},
+\end{equation}
+under the assumption that $U_k(x)$ has a unique global minima at $x=0$, the equilibrium state is again found to \textcolor{MyBlue}{\textbf{diagonalize in the basis of $\hat{A}$}}. 
+
+\textcolor{MyBlue}{\textbf{For a discrete system}}, the equilibrium state has the same form as the harmonic environment case (\autoref{eqn_GCL2_MFGS}), albeit for a renormalized system Hamiltonian.
+\begin{center}
+\includegraphics[width = \columnwidth]{img/zwanzig.pdf}
+\end{center}
+This figure plots, for a specific qutrit system, the trace distance between the SC equilibrium state proposed here and the numerically evaluated equilibrium state as a function of the coupling strength, for the model described by \autoref{eqn_new_spring_model}.
+
+\textcolor{MyBlue}{\textbf{For a continous variable system}} with the system Hamiltonian given as
+$\hat{H}_S = \frac{\hat{p}^2}{2m} + V(\hat{q})$ and $\hat{A} \equiv \hat{q}$,
+the equilibrium state shows deviation from the harmonic environment case, and is given as,
+\begin{align}
+\braket{ q | \rho_{\text{SC}} | q'} &= Z^{-1} \delta(q,q') \braket{ q |e^{-\beta \hat{H}_{\text{eff}}} | q'} \label{eqn:zwanzig SC result},\\
+\hat{H}_{\text{eff}} &= \frac{\hat{p}^2}{2 M_{\text{eff}}} + V_{\text{eff}}(\hat{q}),
+\end{align}
+where, $M_{\text{eff}} = m + \sum_k m_k$ and $V_{\text{eff}}(x) = V(x) + \sum_{k=1}^N U_k^{\text{free}}(x)$. We note that this converges to the harmonic environment result (\autoref{eqn_GCL2_MFGS}) in the limit $M_{\text{eff}} \to \infty$.
+
+
+
+
+
+\textcolor{MyBlue}{\textbf{Intuitive Proof:}} The action corresponding to \autoref{eqn_new_spring_model} is given as
+\begin{equation}
+S_k \equiv \int_0^\beta dt \bigg\{ \frac{m_k}{2} \dot{q}_k(t)^2 + U_k^{\text{free}}(q_k(t)) + \frac{\alpha_k}{2} U_k(q_k(t) - A(t))\bigg\}.
+\end{equation}
+In the SC limit ($\alpha_k \to \infty$), for paths with non-negligible contribution, the condition $q_k(t) = A(t)$ and $A(0) = A(\beta)$ gets imposed. The action simplifies as
+\begin{equation}
+S_k[A(t)] = \int_0^\beta dt \bigg\{ \frac{m_k}{2} \dot{A}(t)^2 + U_k^{\text{free}}(A(t))\bigg\}.
+\end{equation}
+Hence eliminating the path integral over the environment degrees of freedom and giving rise to the expression for the SC equilibrium state derived here.
+{
+\fontsize{18}{22}\selectfont
+\begin{thebibliography}{9}
+
+\bibitem{trushechkin2022open}
+A.S.~Trushechkin, M.~Merkli, J.D.~Cresser, and J.~Anders, \textit{AVS Quantum Science}, vol.~4, no.~1, 2022.
+
+\bibitem{ankerhold2003phase}
+J.~Ankerhold, ``Phase space dynamics of overdamped quantum systems,'' \textit{Europhysics Letters}, vol.~61, 2003.
+
+\bibitem{cresser2021weak}
+J.D.~Cresser and J.~Anders, \textit{Physical Review Letters}, vol.~127, no.~25, p.~250601, 2021.
+
+\bibitem{bramberger2020dephasing}
+M.~Bramberger, I.~De Vega, \textit{Phys. Rev. A}, vol.~101, no.~1, 2020.
+
+\bibitem{kumar2024Ultrastrong}
+P.~Kumar and S.~Ghosh, \textit{arXiv preprint:2405.03044}, 2024.
+
+\bibitem{Wang_2019}
+F.~Wang and N.~Makri, \textit{J. Chem. Phys.}, vol.~150, no.~18, May 2019. \href{http://dx.doi.org/10.1063/1.5091725}{DOI: 10.1063/1.5091725}
+
+\bibitem{Banerjee_2002}
+D.~Banerjee, B.C.~Bag, S.K.~Banik, D.S.~Ray, \textit{Phys. Rev. E}, 2002. \href{http://dx.doi.org/10.1103/PhysRevE.65.021109}{DOI: 10.1103/PhysRevE.65.021109}
+
+\end{thebibliography}
+}
+
+\end{multicols}
+
+}
+
+% This curly braket marks the end of central box
+
+
+
+% Bottom box with QR code
+\bottombox{
+    %% QR code
+    %\qrcode{img/qrcode_beyond_cl.pdf}{img/smartphoneWhite}{Scan QR code to get the full paper}
+    \qrcode{img/qrcode_beyond_cl.pdf}{img/smartphoneWhite}{\textbf{Prem Kumar} and Sibasish Ghosh
+    
+    IMSC, Chennai
+    
+    HBNI, Mumbai, India
+    
+    premkr@imsc.res.in}
+    % Comment out the line below out to hide logo
+    \hfill\bottomboxlogo[height =  \lowerBarLength \paperheight]{img/logo.png}
+    %\hfill\bottomboxlogo[width= 0.5 \textwidth]{img/hbni.png}
+    % \hfill shifts the logo across so it meets the right hand side margin
+    % Note that \bottomboxlogo takes an optional width argument. It defaults to the following: 
+    % \hfill\bottomboxlogo[width=\textwidth]{<path_to_image_file>} 
+    % where \textwidth is actually the width of a minipage which is defined in the \bottombox command of
+    % betterportaitposter.cls It's a standard \includegraphics command in there, so easy to change if 
+    % you need to add a border etc.
+    
+}
+% End of bottom box
+
+
+%\qrcode{img/qrcode}{img/smartphoneWhite}{
+%\textbf{Take a picture} to
+%\\download the full paper
+%}
+
+
+%% Compact QR code (comment the previous command and uncomment this one to switch)
+%\compactqrcode{img/qrcode}{
+%\textbf{Take a picture} to
+%\\download the full paper
+%}
+
+%}
+
+\end{document}
