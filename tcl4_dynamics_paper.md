@@ -9,3 +9,4 @@ title: Home
 
   - [Arxiv Page](https://arxiv.org/abs/2506.17009)
   - [Poster (PDF)](/latex/poster/poster_tcl4_2.pdf)
+  - [Github package](https://github.com/prem314/spin-boson-tcl4)
