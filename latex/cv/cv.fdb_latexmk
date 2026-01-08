@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1767865845.30854 "cv.tex" "cv.pdf" "cv" 1767865845.68654 0
+["pdflatex"] 1767870615.64921 "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" "cv.pdf" "cv" 1767870616.01217 0
   "/etc/texmf/web2c/texmf.cnf" 1757319228.22709 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" 1767870615.48288 6676 dece9952776f1fb971d9751d0d0aa454 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -71,9 +72,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761918571.29731 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761918661 8212260 3cc81cd98910265d71d1fd6d3cbfc14a ""
-  "cv.aux" 1767865845.65315 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "cv.out" 1767865845.58915 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv.tex" 1767865841.92515 6566 bbd191d978cd3c7535d9b7707e6d4e55 ""
+  "cv.aux" 1767870615.98085 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "cv.out" 1767870615.91712 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv.tex" 1767870615.48288 6676 dece9952776f1fb971d9751d0d0aa454 ""
   (generated)
   "cv.aux"
   "cv.log"
