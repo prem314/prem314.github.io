@@ -1,9 +1,11 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
-\usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{comment} % enable \begin{comment} ... \end{comment} blocks
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{citation.bib}
+\usepackage{hyperref}
 
 \hypersetup{
     colorlinks=true,
@@ -42,33 +44,35 @@
 
 \sectionheading{Research Highlights}
 \begin{itemize}[leftmargin=*]
-	\item Analytical derivation of the 4th-order Time-Convolutionless (TCL4) generator for Spin-Boson models, benchmarking it against exact numerical methods. We also studied the corrections to the steady state and non-Markovianity of the dynamics.
-	\item Generalized the ultra-strong coupling limit quantum mean force Gibbs state to a large class of anharmonic environments.
+	\item Analytical derivation of the 4th-order Time-Convolutionless (TCL4) generator for Spin-Boson models, benchmarking it against exact numerical methods. We also studied the corrections to the steady state and non-Markovianity of the dynamics.~\cite{Kumar2025MF, Kumar2025TCL4}
+	\item Generalized the ultra-strong coupling limit quantum mean force Gibbs state to a large class of anharmonic environments.~\cite{Kumar2024Anharm}
 \end{itemize}
 
+
+\sectionheading{Research Interests}
+\begin{itemize}[leftmargin=*]
+    \item Theoretical study of open quantum systems and application to physically/experimentally relevant models like in chemical, biological or other many-body systems.
+    \item Non-Markovian dynamics
+    \item Tensor networks
+    \item Quantum information theory
+\end{itemize}
 
 \sectionheading{Publications}
 
+\nocite{Kumar2025MF,Kumar2024LHA}
+
 \textbf{\textit{Refereed Journal Publications}}
-\begin{enumerate}[leftmargin=*,label=\arabic*.]
-    \item Prem Kumar, K. P. Athulya, and Sibasish Ghosh. \textbf{``Asymptotic TCL4 Generator for the Spin-Boson Model: Analytical Derivation and Benchmarking."} \textit{\href{https://doi.org/10.1103/69y3-x6vh}{Physical Review B}} (2025).
-    \item Prem Kumar, K. P. Athulya, and Sibasish Ghosh. \textbf{``Equivalence between the second order steady state for the spin-boson model and its quantum mean force Gibbs state."} \textit{\href{https://doi.org/10.1103/PhysRevB.111.115423}{Physical Review B}} 111, 115423 (2025).
-    \item Prem Kumar, and Sibasish Ghosh. \textbf{``Ultrastrong coupling limit to quantum mean force Gibbs state for anharmonic environment."} \textit{\href{https://doi.org/10.1063/5.0223734}{The Journal of Chemical Physics}} 161, 17 (2024).
-\end{enumerate}
+\printbibliography[heading=none,keyword=refereed]
 
 \textbf{\textit{Pedagogical Reviews}}
-\begin{itemize}[leftmargin=*]
-    \item Prem Kumar. \textbf{``Local harmonic approximation to quantum mean force Gibbs state"} \href{https://arxiv.org/abs/2401.11595}{arXiv:2401.11595} (2024).
-    \\[0.1cm]
-    \footnotesize{\textit{Note: A unified derivation and review of the harmonic approximation method for mean force Gibbs state.}}
-\end{itemize}
+\printbibliography[heading=none,keyword=pedagogical]
 
 
 \sectionheading{Technical Skills}
 \begin{itemize}[leftmargin=*]
     \item \textbf{Computational Physics \& ML:} 
     \begin{itemize}
-        \item \textbf{Tensor Networks:} Implementation of algorithms for simulating open quantum system dynamics.
+        \item \textbf{Tensor Networks:} Implementation of algorithms for simulating open quantum system dynamics using Feynman-Vernon influence functional formalism and tensor network framework.
         \item \textbf{Machine Learning:} \textbf{PyTorch} for machine learning and designing transformer models.
         \item \textbf{Languages:} Python (QuTiP, NumPy, SciPy).
     \end{itemize}
