@@ -1,0 +1,188 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Kumar2025MF}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d561306c29e0bdfa0ccf90c88492dc13}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Prem},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3575768e07843fd88b26998c50cbfe43}{%
+           family={Athulya},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9c1cd8dfdc80bb1db03cf10fa52e8142}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Sibasish},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{fullhash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{bibnamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authorbibnamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authornamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authorfullhash}{39c2dad6571c382fc67fcd72e037cf90}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{11}
+      \field{title}{Equivalence between the second order steady state for the spin-boson model and its quantum mean force Gibbs state}
+      \field{volume}{111}
+      \field{year}{2025}
+      \field{pages}{115423}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.111.115423
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1103/PhysRevB.111.115423
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1103/PhysRevB.111.115423
+      \endverb
+      \keyw{refereed}
+    \endentry
+    \entry{Kumar2025TCL4}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d561306c29e0bdfa0ccf90c88492dc13}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Prem},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3575768e07843fd88b26998c50cbfe43}{%
+           family={Athulya},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9c1cd8dfdc80bb1db03cf10fa52e8142}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Sibasish},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{fullhash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{bibnamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authorbibnamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authornamehash}{39c2dad6571c382fc67fcd72e037cf90}
+      \strng{authorfullhash}{39c2dad6571c382fc67fcd72e037cf90}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{title}{Asymptotic TCL4 Generator for the Spin-Boson Model: Analytical Derivation and Benchmarking}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1103/69y3-x6vh
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1103/69y3-x6vh
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1103/69y3-x6vh
+      \endverb
+      \keyw{refereed}
+    \endentry
+    \entry{Kumar2024Anharm}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d561306c29e0bdfa0ccf90c88492dc13}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Prem},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9c1cd8dfdc80bb1db03cf10fa52e8142}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Sibasish},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5ab74830063ee2495391d443877f25b}
+      \strng{fullhash}{d5ab74830063ee2495391d443877f25b}
+      \strng{bibnamehash}{d5ab74830063ee2495391d443877f25b}
+      \strng{authorbibnamehash}{d5ab74830063ee2495391d443877f25b}
+      \strng{authornamehash}{d5ab74830063ee2495391d443877f25b}
+      \strng{authorfullhash}{d5ab74830063ee2495391d443877f25b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Chemical Physics}
+      \field{number}{17}
+      \field{title}{Ultrastrong coupling limit to quantum mean force Gibbs state for anharmonic environment}
+      \field{volume}{161}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1063/5.0223734
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1063/5.0223734
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1063/5.0223734
+      \endverb
+      \keyw{refereed}
+    \endentry
+    \entry{Kumar2024LHA}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d561306c29e0bdfa0ccf90c88492dc13}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Prem},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \strng{fullhash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \strng{bibnamehash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \strng{authorbibnamehash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \strng{authornamehash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \strng{authorfullhash}{d561306c29e0bdfa0ccf90c88492dc13}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{note}{A unified derivation and review of the harmonic approximation method for mean force Gibbs state.}
+      \field{title}{Local harmonic approximation to quantum mean force Gibbs state}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2401.11595
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2401.11595
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2401.11595
+      \endverb
+      \keyw{pedagogical}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
