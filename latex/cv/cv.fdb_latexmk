@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber cv"] 1767873063.8241 "cv.bcf" "cv.bbl" "cv" 1767877042.7407 0
+["biber cv"] 1767873063.8241 "cv.bcf" "cv.bbl" "cv" 1767898563.57853 0
   "citation.bib" 1767873063.66806 1345 bd544e05aad03a03845a9e1da2384623 ""
-  "cv.bcf" 1767877042.70092 107243 69e777eb3c363b122e9e918e605ad1d6 "pdflatex"
+  "cv.bcf" 1767898563.53736 107243 69e777eb3c363b122e9e918e605ad1d6 "pdflatex"
   (generated)
   "cv.bbl"
   "cv.blg"
   (rewritten before read)
-["pdflatex"] 1767877042.11897 "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" "cv.pdf" "cv" 1767877042.74094 0
+["pdflatex"] 1767898562.93566 "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" "cv.pdf" "cv" 1767898563.57876 0
   "/etc/texmf/web2c/texmf.cnf" 1757319228.22709 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" 1767877041.9322 6635 cff7f3bab57c9fd064653eee4da76054 ""
+  "/home/premkr/git/prem314.github.io/latex/cv/cv.tex" 1767898562.77324 7008 5a204ee260069bcffad281b487579a3b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -101,11 +101,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761918571.29731 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761918661 8212260 3cc81cd98910265d71d1fd6d3cbfc14a ""
-  "cv.aux" 1767877042.69992 892 b3f097df1e767adb3b90d436e1b494d4 "pdflatex"
+  "cv.aux" 1767898563.53636 892 b3f097df1e767adb3b90d436e1b494d4 "pdflatex"
   "cv.bbl" 1767873257.39398 6038 d72efade02161d1abcc0e86943df576c "biber cv"
-  "cv.out" 1767877042.61016 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv.run.xml" 1767877042.70256 2289 1ac66dcea3a013d4790977eb87d9545c "pdflatex"
-  "cv.tex" 1767877041.9322 6635 cff7f3bab57c9fd064653eee4da76054 ""
+  "cv.out" 1767898563.44536 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv.run.xml" 1767898563.53824 2289 1ac66dcea3a013d4790977eb87d9545c "pdflatex"
+  "cv.tex" 1767898562.77324 7008 5a204ee260069bcffad281b487579a3b ""
   (generated)
   "cv.aux"
   "cv.bcf"
