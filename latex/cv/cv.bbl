@@ -58,12 +58,6 @@
       \verb{doi}
       \verb 10.1103/PhysRevB.111.115423
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1103/PhysRevB.111.115423
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1103/PhysRevB.111.115423
-      \endverb
       \keyw{refereed}
     \endentry
     \entry{Kumar2025TCL4}{article}{}
@@ -101,12 +95,6 @@
       \verb{doi}
       \verb 10.1103/69y3-x6vh
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1103/69y3-x6vh
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1103/69y3-x6vh
-      \endverb
       \keyw{refereed}
     \endentry
     \entry{Kumar2024Anharm}{article}{}
@@ -140,12 +128,6 @@
       \verb{doi}
       \verb 10.1063/5.0223734
       \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1063/5.0223734
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1063/5.0223734
-      \endverb
       \keyw{refereed}
     \endentry
     \entry{Kumar2024LHA}{article}{}
@@ -167,18 +149,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
-      \field{note}{A unified derivation and review of the harmonic approximation method for mean force Gibbs state.}
       \field{title}{Local harmonic approximation to quantum mean force Gibbs state}
       \field{year}{2024}
       \true{nocite}
       \verb{eprint}
       \verb 2401.11595
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2401.11595
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2401.11595
       \endverb
       \keyw{pedagogical}
     \endentry
