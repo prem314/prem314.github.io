@@ -6,7 +6,7 @@ Structure overview
 - Shared snippets live in `_includes/`. Only `giscus.html` exists now and is injected by the default layout for comments.
 - Static assets are under `assets/` (CSS in `assets/css/`, images in `assets/images/`).
 - Site-wide config is in `_config.yml` (title, description, baseurl, url).
-- `latex/` contains PDFs and LaTeX sources. CV files live in `latex/cv/` (e.g., `latex/cv/cv.pdf`), and posters live in `latex/poster/` (PDF + `.tex`). These are linked from pages but not part of the Jekyll layout.
+- `latex/` contains PDFs and LaTeX sources. CV files live in `latex/cv/` (e.g., `latex/cv/cv_prem.pdf`), and posters live in `latex/poster/` (PDF + `.tex`). These are linked from pages but not part of the Jekyll layout.
 
 Common edits
 - Update page content by editing the corresponding root `.md` file.
