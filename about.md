@@ -27,7 +27,7 @@ I have plans to extend these research to study many-body quantum systems that sh
 
 **Contact Me**
   - Email: premkr at imsc dot res dot in
-  - [CV](latex/cv/cv.pdf)
+  - [CV](latex/cv/cv_prem.pdf)
   - [Google Scholar](https://scholar.google.com/citations?user=f-ZPkk0AAAAJ&hl=en)
   - [Orcid](https://orcid.org/my-orcid?orcid=0009-0007-4032-4332)
   - [github](https://github.com/prem314)
