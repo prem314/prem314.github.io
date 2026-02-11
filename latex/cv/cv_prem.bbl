@@ -85,8 +85,8 @@
       \strng{authornamehash}{39c2dad6571c382fc67fcd72e037cf90}
       \strng{authorfullhash}{39c2dad6571c382fc67fcd72e037cf90}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Physical Review B}
@@ -116,8 +116,8 @@
       \strng{authorbibnamehash}{d5ab74830063ee2495391d443877f25b}
       \strng{authornamehash}{d5ab74830063ee2495391d443877f25b}
       \strng{authorfullhash}{d5ab74830063ee2495391d443877f25b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Journal of Chemical Physics}
@@ -144,8 +144,8 @@
       \strng{authorbibnamehash}{d561306c29e0bdfa0ccf90c88492dc13}
       \strng{authornamehash}{d561306c29e0bdfa0ccf90c88492dc13}
       \strng{authorfullhash}{d561306c29e0bdfa0ccf90c88492dc13}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
