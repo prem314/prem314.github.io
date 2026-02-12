@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.17)  11 FEB 2026 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.17)  12 FEB 2026 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,7 +506,7 @@ Package hyperref Info: Link coloring ON on input line 21.
 \openout5 = `cv_prem.out'.
 
 
-Overfull \hbox (1.71362pt too wide) in paragraph at lines 47--49
+Overfull \hbox (1.71362pt too wide) in paragraph at lines 48--50
 []\OT1/cmr/bx/n/10.95 Corrections to quan-tum dis-si-pa-tive dy-nam-ics at higher or-der in the noise strength: 
  []
 
@@ -523,13 +523,13 @@ Package biblatex Warning: Split bibliography detected.
 (biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 88.
+(Font)              <10.95> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 88.
+(Font)              <6> on input line 89.
 
-Overfull \hbox (3.23216pt too wide) in paragraph at lines 88--88
+Overfull \hbox (3.23216pt too wide) in paragraph at lines 89--89
 \OT1/cmr/m/n/10.95 Spin-Boson Model: An-a-lyt-i-cal Deriva-tion and Bench-mark-ing''. In: \OT1/cmr/m/it/10.95 Phys-i-cal Re-view B \OT1/cmr/m/n/10.95 (2025).
  []
 
