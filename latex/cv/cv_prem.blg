@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'cv_prem.blg'
-[34] biber:340> INFO - === Tue Feb 24, 2026, 14:36:17
-[43] Biber.pm:418> INFO - Reading 'cv_prem.bcf'
-[69] Biber.pm:978> INFO - Found 4 citekeys in bib section 0
-[75] Biber.pm:4401> INFO - Processing section 0
-[81] Biber.pm:4592> INFO - Looking for bibtex file 'citation.bib' for section 0
-[81] bibtex.pm:1713> INFO - LaTeX decoding ...
-[83] bibtex.pm:1518> INFO - Found BibTeX data source 'citation.bib'
-[108] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[108] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[108] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[108] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[109] bbl.pm:654> INFO - Writing 'cv_prem.bbl' with encoding 'UTF-8'
-[110] bbl.pm:757> INFO - Output to cv_prem.bbl
+[38] biber:340> INFO - === Mon Mar 16, 2026, 12:32:21
+[45] Biber.pm:418> INFO - Reading 'cv_prem.bcf'
+[74] Biber.pm:978> INFO - Found 4 citekeys in bib section 0
+[80] Biber.pm:4401> INFO - Processing section 0
+[85] Biber.pm:4592> INFO - Looking for bibtex file 'citation.bib' for section 0
+[85] bibtex.pm:1713> INFO - LaTeX decoding ...
+[88] bibtex.pm:1518> INFO - Found BibTeX data source 'citation.bib'
+[114] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[114] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[114] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[114] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[115] bbl.pm:654> INFO - Writing 'cv_prem.bbl' with encoding 'UTF-8'
+[117] bbl.pm:757> INFO - Output to cv_prem.bbl
