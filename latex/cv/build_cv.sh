@@ -2,6 +2,9 @@
 set -euo pipefail
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$script_dir"
+repo_root="$(cd "$script_dir/../../.." && pwd)"
+thesis_cv_dir="$repo_root/thesis/post_doc/cv"
+website_pdf="$script_dir/cv_prem.pdf"
 
-latexmk -pdf -interaction=nonstopmode cv_prem.tex
+"$thesis_cv_dir/cv_prem.sh"
+cp "$thesis_cv_dir/cv_prem.pdf" "$website_pdf"
