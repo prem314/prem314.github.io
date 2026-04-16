@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home
+title: Asymptotic fourth-order time-convolutionless generator for the spin-boson model: Analytical derivation and benchmarking
 ---
 
-# Asymptotic TCL4 Generator for the Spin-Boson Model: Analytical Derivation and Benchmarking
+# Asymptotic fourth-order time-convolutionless generator for the spin-boson model: Analytical derivation and benchmarking
 
 ## Quick links
 
