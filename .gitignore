@@ -30,6 +30,10 @@ ENV/
 htmlcov/
 .mplconfig/
 
+# Images
+*.gif
+*.npz
+
 # Local editor and OS junk
 .DS_Store
 Thumbs.db
