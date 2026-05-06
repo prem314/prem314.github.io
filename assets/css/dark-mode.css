@@ -1,5 +1,9 @@
 /* assets/css/dark-mode.css */
 
+:root {
+    color-scheme: dark;
+}
+
 body {
     background-color: #121212;
     color: #e0e0e0;
