@@ -58,9 +58,14 @@ main {
 .home-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "copy portrait";
     gap: 32px;
     align-items: center;
     min-height: 60vh;
+}
+
+.home-copy {
+    grid-area: copy;
 }
 
 .home-copy h1 {
@@ -77,6 +82,7 @@ main {
 }
 
 .ascii-portrait {
+    grid-area: portrait;
     box-sizing: border-box;
     max-width: 100%;
     margin: 0;
@@ -96,7 +102,10 @@ main {
 @media (max-width: 760px) {
     .home-hero {
         grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-areas:
+            "copy"
+            "portrait";
+        gap: 16px;
         min-height: auto;
     }
 
@@ -106,7 +115,9 @@ main {
 
     .ascii-portrait {
         width: 100%;
-        padding: 12px;
+        padding: 8px;
+        overflow-x: hidden;
+        font-size: 6px;
     }
 }
 
