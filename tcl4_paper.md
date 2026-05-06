@@ -9,4 +9,4 @@ Authors: Prem Kumar, K. P. Athulya, Sibasish Ghosh
 
   - [PRB version](https://doi.org/10.1103/PhysRevB.111.115423)
   - [Arxiv Page](https://doi.org/10.48550/arXiv.2411.08869)
-  - [Poster (PDF)](/latex/poster/poster_tcl4_1.pdf)
+  - [Poster (PDF)](https://www.dropbox.com/scl/fi/ysamff0jhsz5erbyblhz5/poster_tcl4_1.pdf?rlkey=9c3pq58ysikonykm3gx9j5nsk&dl=0)
