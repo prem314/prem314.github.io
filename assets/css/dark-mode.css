@@ -22,6 +22,12 @@ main {
     background-color: #121212;
 }
 
+.ascii-portrait {
+    background: #171717;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
 footer {
     background: #1f1f1f;
     border-top: 1px solid #333;
