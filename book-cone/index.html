@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 Billion Book Cone Scale Study</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201d;
+      --muted: #52615c;
+      --panel: rgba(248, 250, 247, 0.9);
+      --line: rgba(23, 32, 29, 0.16);
+      --accent: #b66a2c;
+      --accent-blue: #275d78;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(#d7e0dd 0%, #eef1ea 58%, #d2d4c6 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #scene,
+    #overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #scene {
+      z-index: 0;
+    }
+
+    #overlay {
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hud {
+      position: fixed;
+      z-index: 3;
+      top: 16px;
+      left: 16px;
+      width: min(372px, calc(100vw - 32px));
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 18px 60px rgba(28, 35, 31, 0.14);
+      backdrop-filter: blur(10px);
+    }
+
+    .hud.hidden {
+      display: none;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      line-height: 1.15;
+      font-weight: 760;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      min-width: 0;
+      padding: 9px 10px;
+      border: 1px solid rgba(23, 32, 29, 0.11);
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 2px;
+      overflow-wrap: anywhere;
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 720;
+    }
+
+    .formula {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .controls {
+      position: fixed;
+      z-index: 3;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 14px 42px rgba(28, 35, 31, 0.14);
+      backdrop-filter: blur(10px);
+    }
+
+    button {
+      min-width: 64px;
+      min-height: 36px;
+      border: 1px solid rgba(23, 32, 29, 0.18);
+      border-radius: 7px;
+      background: #ffffff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 680;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: rgba(39, 93, 120, 0.45);
+      background: #f5f8f7;
+    }
+
+    button.active {
+      border-color: rgba(182, 106, 44, 0.7);
+      background: #fff4ea;
+      color: #6d3714;
+    }
+
+    .scene-label {
+      position: fixed;
+      z-index: 2;
+      max-width: 170px;
+      padding: 5px 8px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(23, 32, 29, 0.16);
+      box-shadow: 0 8px 24px rgba(28, 35, 31, 0.12);
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.2;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      white-space: normal;
+    }
+
+    .scene-label strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .fallback {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: #eef1ea;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .fallback.visible {
+      display: grid;
+    }
+
+    @media (max-width: 680px) {
+      .hud {
+        top: 10px;
+        left: 10px;
+        width: calc(100vw - 20px);
+        padding: 11px;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .controls {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        justify-content: space-between;
+      }
+
+      button {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <canvas id="overlay"></canvas>
+
+  <section class="hud" aria-label="scene calculations">
+    <h1>8 billion book cone</h1>
+    <div class="metrics">
+      <div class="metric">
+        <span>Height</span>
+        <strong id="heightMetric">...</strong>
+      </div>
+      <div class="metric">
+        <span>Base diameter</span>
+        <strong id="diameterMetric">...</strong>
+      </div>
+      <div class="metric">
+        <span>Book volume</span>
+        <strong id="bookVolumeMetric">...</strong>
+      </div>
+      <div class="metric">
+        <span>Heap volume</span>
+        <strong id="heapVolumeMetric">...</strong>
+      </div>
+    </div>
+    <div class="formula" id="formulaText"></div>
+  </section>
+
+  <nav class="controls" aria-label="camera views">
+    <button type="button" data-view="full" class="active">Full</button>
+    <button type="button" data-view="scale">Scale</button>
+    <button type="button" data-view="man">Man</button>
+    <button type="button" data-view="top">Top</button>
+    <button type="button" data-toggle="hud" class="active" aria-pressed="true">Info</button>
+  </nav>
+
+  <div class="scene-label" id="heightLabel"></div>
+  <div class="scene-label" id="diameterLabel"></div>
+
+  <div class="fallback" id="fallback">
+    <div>
+      <h1>WebGL is unavailable</h1>
+      <p>This scene needs WebGL in the browser.</p>
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+
+    const canvas = document.getElementById("scene");
+    const overlay = document.getElementById("overlay");
+    const ctx = overlay.getContext("2d");
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: false });
+
+    if (!gl) {
+      document.getElementById("fallback").classList.add("visible");
+      throw new Error("WebGL unavailable");
+    }
+
+    const BOOK_COUNT = 8_000_000_000;
+    const BOOK_SIZE = { height: 0.24, width: 0.16, thickness: 0.03 };
+    const PACKING_FILL = 0.55;
+    const CONE_SIDE_ANGLE_DEG = 45;
+    const MAN_HEIGHT = 1.8;
+
+    const bookVolume = BOOK_SIZE.height * BOOK_SIZE.width * BOOK_SIZE.thickness;
+    const solidBookVolume = BOOK_COUNT * bookVolume;
+    const heapVolume = solidBookVolume / PACKING_FILL;
+    const coneAngle = radians(CONE_SIDE_ANGLE_DEG);
+    const coneRadius = Math.cbrt((3 * heapVolume) / (Math.PI * Math.tan(coneAngle)));
+    const coneHeight = coneRadius * Math.tan(coneAngle);
+    const coneDiameter = coneRadius * 2;
+    const manX = coneRadius + 23;
+    const scaleRow = {
+      carX: manX + 7,
+      truckX: manX + 26,
+      buildingX: manX + 55,
+      planeX: manX + 130
+    };
+
+    const formatWhole = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+    const formatDecimal = new Intl.NumberFormat("en-US", { maximumFractionDigits: 3 });
+
+    document.getElementById("heightMetric").textContent = `${formatWhole.format(coneHeight)} m`;
+    document.getElementById("diameterMetric").textContent = `${formatWhole.format(coneDiameter)} m`;
+    document.getElementById("bookVolumeMetric").textContent = `${formatDecimal.format(bookVolume)} m^3 each`;
+    document.getElementById("heapVolumeMetric").textContent = `${formatWhole.format(heapVolume)} m^3`;
+    document.getElementById("formulaText").textContent =
+      `Assumes ${formatWhole.format(BOOK_COUNT)} books at ${BOOK_SIZE.height}m x ${BOOK_SIZE.width}m x ${BOOK_SIZE.thickness}m, ` +
+      `${Math.round(PACKING_FILL * 100)}% packing fill, and a ${CONE_SIDE_ANGLE_DEG} degree cone side angle.`;
+
+    const vertexShaderSource = `
+      attribute vec3 aPosition;
+      attribute vec3 aNormal;
+      attribute vec3 aColor;
+
+      uniform mat4 uViewProj;
+
+      varying vec3 vNormal;
+      varying vec3 vColor;
+      varying vec3 vWorld;
+
+      void main() {
+        vNormal = normalize(aNormal);
+        vColor = aColor;
+        vWorld = aPosition;
+        gl_Position = uViewProj * vec4(aPosition, 1.0);
+      }
+    `;
+
+    const fragmentShaderSource = `
+      precision mediump float;
+
+      varying vec3 vNormal;
+      varying vec3 vColor;
+      varying vec3 vWorld;
+
+      uniform vec3 uLightDir;
+      uniform vec3 uCamera;
+
+      void main() {
+        vec3 n = normalize(vNormal);
+        float diffuse = max(dot(n, normalize(uLightDir)), 0.0);
+        float rim = pow(1.0 - max(dot(n, normalize(uCamera - vWorld)), 0.0), 2.0);
+        vec3 color = vColor * (0.36 + diffuse * 0.68) + vec3(0.06, 0.075, 0.07) * rim;
+        gl_FragColor = vec4(color, 1.0);
+      }
+    `;
+
+    const program = createProgram(vertexShaderSource, fragmentShaderSource);
+    const locations = {
+      position: gl.getAttribLocation(program, "aPosition"),
+      normal: gl.getAttribLocation(program, "aNormal"),
+      color: gl.getAttribLocation(program, "aColor"),
+      viewProj: gl.getUniformLocation(program, "uViewProj"),
+      lightDir: gl.getUniformLocation(program, "uLightDir"),
+      camera: gl.getUniformLocation(program, "uCamera")
+    };
+
+    const worldMesh = buildWorldMesh();
+    const lineMesh = buildLineMesh();
+    const worldGL = uploadMesh(worldMesh);
+    const lineGL = uploadMesh(lineMesh);
+
+    const camera = {
+      theta: 0.68,
+      phi: 0.32,
+      distance: 720,
+      target: [45, 94, 0]
+    };
+
+    const views = {
+      full: { theta: 0.68, phi: 0.32, distance: 720, target: [45, 94, 0] },
+      scale: { theta: 0.30, phi: 0.16, distance: 200, target: [manX + 82, 8, 0] },
+      man: { theta: -0.82, phi: 0.18, distance: 18, target: [manX, 1.05, 0] },
+      top: { theta: 0.08, phi: 1.48, distance: 720, target: [0, 0, 0] }
+    };
+
+    let activeView = "full";
+    let dragging = false;
+    let lastPointer = [0, 0];
+    let viewProj = mat4();
+    let projection = mat4();
+    let view = mat4();
+    let eye = [0, 0, 0];
+
+    canvas.addEventListener("pointerdown", (event) => {
+      dragging = true;
+      lastPointer = [event.clientX, event.clientY];
+      canvas.setPointerCapture(event.pointerId);
+      setActiveView(null);
+    });
+
+    canvas.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      const dx = event.clientX - lastPointer[0];
+      const dy = event.clientY - lastPointer[1];
+      lastPointer = [event.clientX, event.clientY];
+      camera.theta -= dx * 0.006;
+      camera.phi = clamp(camera.phi + dy * 0.004, -0.18, 1.52);
+    });
+
+    canvas.addEventListener("pointerup", (event) => {
+      dragging = false;
+      canvas.releasePointerCapture(event.pointerId);
+    });
+
+    canvas.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      camera.distance = clamp(camera.distance * Math.exp(event.deltaY * 0.001), 2.6, 2200);
+      setActiveView(null);
+    }, { passive: false });
+
+    document.querySelectorAll("[data-view]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const next = views[button.dataset.view];
+        camera.theta = next.theta;
+        camera.phi = next.phi;
+        camera.distance = next.distance;
+        camera.target = [...next.target];
+        setActiveView(button.dataset.view);
+      });
+    });
+
+    document.querySelector("[data-toggle='hud']").addEventListener("click", (event) => {
+      const hud = document.querySelector(".hud");
+      const hidden = hud.classList.toggle("hidden");
+      event.currentTarget.classList.toggle("active", !hidden);
+      event.currentTarget.setAttribute("aria-pressed", String(!hidden));
+    });
+
+    gl.enable(gl.DEPTH_TEST);
+    gl.clearColor(0.84, 0.89, 0.87, 1);
+
+    requestAnimationFrame(render);
+
+    function render() {
+      const size = resize();
+      const aspect = size.width / Math.max(1, size.height);
+      perspective(projection, radians(44), aspect, 0.04, 3200);
+
+      const horizontal = camera.distance * Math.cos(camera.phi);
+      eye = [
+        camera.target[0] + horizontal * Math.sin(camera.theta),
+        camera.target[1] + camera.distance * Math.sin(camera.phi),
+        camera.target[2] + horizontal * Math.cos(camera.theta)
+      ];
+
+      lookAt(view, eye, camera.target, [0, 1, 0]);
+      multiply(viewProj, projection, view);
+
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.useProgram(program);
+      gl.uniformMatrix4fv(locations.viewProj, false, viewProj);
+      gl.uniform3fv(locations.lightDir, normalize([-0.35, 0.86, 0.38]));
+      gl.uniform3fv(locations.camera, eye);
+
+      drawUploadedMesh(worldGL, gl.TRIANGLES);
+      drawUploadedMesh(lineGL, gl.LINES);
+      drawAnnotations(size.dpr);
+
+      requestAnimationFrame(render);
+    }
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.max(1, Math.floor(canvas.clientWidth * dpr));
+      const height = Math.max(1, Math.floor(canvas.clientHeight * dpr));
+
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+        overlay.width = width;
+        overlay.height = height;
+      }
+
+      return {
+        dpr,
+        width,
+        height,
+        cssWidth: canvas.clientWidth,
+        cssHeight: canvas.clientHeight
+      };
+    }
+
+    function drawAnnotations(dpr) {
+      const cssWidth = overlay.clientWidth;
+      const cssHeight = overlay.clientHeight;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
+      const heightBase = [-coneRadius - 18, 0, 0];
+      const heightTop = [-coneRadius - 18, coneHeight, 0];
+      const diameterLeft = [-coneRadius, 0.2, coneRadius + 28];
+      const diameterRight = [coneRadius, 0.2, coneRadius + 28];
+      const manBase = [manX + 0.72, 0, 0];
+      const manTop = [manX + 0.72, MAN_HEIGHT, 0];
+
+      drawMeasureLine(heightBase, heightTop, "#b66a2c", [7, 5]);
+      drawMeasureLine(diameterLeft, diameterRight, "#275d78", [7, 5]);
+      drawMeasureLine(manBase, manTop, "#17201d", []);
+
+      placeLabel(
+        document.getElementById("heightLabel"),
+        midpoint(heightBase, heightTop),
+        `<strong>${formatWhole.format(coneHeight)} m</strong>cone height`
+      );
+      placeLabel(
+        document.getElementById("diameterLabel"),
+        midpoint(diameterLeft, diameterRight),
+        `<strong>${formatWhole.format(coneDiameter)} m</strong>base diameter`
+      );
+    }
+
+    function drawMeasureLine(a, b, color, dash) {
+      const pa = project(a);
+      const pb = project(b);
+      if (!pa || !pb) return;
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.6;
+      ctx.setLineDash(dash);
+      ctx.beginPath();
+      ctx.moveTo(pa.x, pa.y);
+      ctx.lineTo(pb.x, pb.y);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function placeLabel(element, point, html) {
+      const p = project(point);
+      if (!p) {
+        element.style.display = "none";
+        return;
+      }
+
+      element.innerHTML = html;
+      element.style.display = "block";
+      element.style.left = `${p.x}px`;
+      element.style.top = `${p.y}px`;
+    }
+
+    function project(point) {
+      const x = point[0];
+      const y = point[1];
+      const z = point[2];
+      const clipX = viewProj[0] * x + viewProj[4] * y + viewProj[8] * z + viewProj[12];
+      const clipY = viewProj[1] * x + viewProj[5] * y + viewProj[9] * z + viewProj[13];
+      const clipZ = viewProj[2] * x + viewProj[6] * y + viewProj[10] * z + viewProj[14];
+      const clipW = viewProj[3] * x + viewProj[7] * y + viewProj[11] * z + viewProj[15];
+
+      if (clipW <= 0.001) return null;
+      const ndcX = clipX / clipW;
+      const ndcY = clipY / clipW;
+      const ndcZ = clipZ / clipW;
+      if (ndcZ < -1.1 || ndcZ > 1.1) return null;
+
+      return {
+        x: (ndcX * 0.5 + 0.5) * canvas.clientWidth,
+        y: (-ndcY * 0.5 + 0.5) * canvas.clientHeight
+      };
+    }
+
+    function buildWorldMesh() {
+      const b = createBuilder();
+      addPlane(b, 720);
+      addCone(b, coneRadius, coneHeight, 144, 54);
+      addHuman(b, manX, 0, 0, MAN_HEIGHT);
+      addCar(b, scaleRow.carX, 0, 0);
+      addSemiTruck(b, scaleRow.truckX, 0, 0);
+      addFourStoryBuilding(b, scaleRow.buildingX, 0, 0);
+      addBoeing777(b, scaleRow.planeX, 0, 0);
+      return b;
+    }
+
+    function buildLineMesh() {
+      const b = createBuilder();
+      const extent = 700;
+      const step = 50;
+      for (let i = -extent; i <= extent; i += step) {
+        const major = i === 0;
+        addLine(b, [-extent, 0.035, i], [extent, 0.035, i], major ? [0.24, 0.32, 0.34] : [0.43, 0.48, 0.45]);
+        addLine(b, [i, 0.035, -extent], [i, 0.035, extent], major ? [0.38, 0.31, 0.22] : [0.43, 0.48, 0.45]);
+      }
+      addLine(b, [manX, 0, 0], [manX, MAN_HEIGHT, 0], [0.08, 0.11, 0.1]);
+      return b;
+    }
+
+    function addPlane(b, halfSize) {
+      const c1 = [0.55, 0.58, 0.51];
+      const c2 = [0.50, 0.54, 0.48];
+      const y = -0.02;
+      pushTri(
+        b,
+        [-halfSize, y, -halfSize],
+        [halfSize, y, -halfSize],
+        [halfSize, y, halfSize],
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0],
+        c1,
+        c2,
+        c1
+      );
+      pushTri(
+        b,
+        [-halfSize, y, -halfSize],
+        [halfSize, y, halfSize],
+        [-halfSize, y, halfSize],
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0],
+        c1,
+        c1,
+        c2
+      );
+    }
+
+    function addCone(b, radius, height, segments, rings) {
+      const slopeNormalY = radius / height;
+
+      for (let ring = 0; ring < rings; ring += 1) {
+        const t0 = ring / rings;
+        const t1 = (ring + 1) / rings;
+        const y0 = t0 * height;
+        const y1 = t1 * height;
+        const r0 = radius * (1 - t0);
+        const r1 = radius * (1 - t1);
+
+        for (let i = 0; i < segments; i += 1) {
+          const a0 = (i / segments) * Math.PI * 2;
+          const a1 = ((i + 1) / segments) * Math.PI * 2;
+          const p00 = [Math.cos(a0) * r0, y0, Math.sin(a0) * r0];
+          const p01 = [Math.cos(a1) * r0, y0, Math.sin(a1) * r0];
+          const p10 = [Math.cos(a0) * r1, y1, Math.sin(a0) * r1];
+          const p11 = [Math.cos(a1) * r1, y1, Math.sin(a1) * r1];
+          const n0 = normalize([Math.cos(a0), slopeNormalY, Math.sin(a0)]);
+          const n1 = normalize([Math.cos(a1), slopeNormalY, Math.sin(a1)]);
+          const c00 = coneColor(t0, i, ring);
+          const c01 = coneColor(t0, i + 1, ring);
+          const c10 = coneColor(t1, i, ring + 1);
+          const c11 = coneColor(t1, i + 1, ring + 1);
+
+          pushTri(b, p00, p10, p11, n0, n0, n1, c00, c10, c11);
+          pushTri(b, p00, p11, p01, n0, n1, n1, c00, c11, c01);
+        }
+      }
+
+      const baseCenter = [0, 0, 0];
+      for (let i = 0; i < segments; i += 1) {
+        const a0 = (i / segments) * Math.PI * 2;
+        const a1 = ((i + 1) / segments) * Math.PI * 2;
+        pushTri(
+          b,
+          baseCenter,
+          [Math.cos(a1) * radius, 0, Math.sin(a1) * radius],
+          [Math.cos(a0) * radius, 0, Math.sin(a0) * radius],
+          [0, -1, 0],
+          [0, -1, 0],
+          [0, -1, 0],
+          [0.16, 0.11, 0.08],
+          [0.20, 0.14, 0.10],
+          [0.20, 0.14, 0.10]
+        );
+      }
+    }
+
+    function coneColor(t, segment, ring) {
+      const base = mix([0.24, 0.15, 0.10], [0.63, 0.48, 0.32], t);
+      const stripe = hash(segment * 17 + ring * 101);
+      const paper = hash(segment * 43 + ring * 29);
+      const accent = paper > 0.94 ? [0.30, 0.23, 0.13] : paper > 0.88 ? [0.47, 0.38, 0.25] : base;
+      const m = 0.88 + stripe * 0.22;
+      return [
+        clamp(mixValue(base[0], accent[0], 0.35) * m, 0, 1),
+        clamp(mixValue(base[1], accent[1], 0.35) * m, 0, 1),
+        clamp(mixValue(base[2], accent[2], 0.35) * m, 0, 1)
+      ];
+    }
+
+    function addHuman(b, x, y, z, height) {
+      const scale = height / 1.8;
+      const skin = [0.72, 0.53, 0.40];
+      const shirt = [0.06, 0.34, 0.40];
+      const pants = [0.10, 0.12, 0.15];
+      const shoes = [0.05, 0.05, 0.045];
+
+      addCylinder(b, [x - 0.075 * scale, y + 0.44 * scale, z], 0.045 * scale, 0.88 * scale, 18, pants);
+      addCylinder(b, [x + 0.075 * scale, y + 0.44 * scale, z], 0.045 * scale, 0.88 * scale, 18, pants);
+      addBox(b, [x - 0.075 * scale, y + 0.035 * scale, z + 0.035 * scale], [0.13 * scale, 0.07 * scale, 0.24 * scale], shoes);
+      addBox(b, [x + 0.075 * scale, y + 0.035 * scale, z + 0.035 * scale], [0.13 * scale, 0.07 * scale, 0.24 * scale], shoes);
+      addCylinder(b, [x, y + 1.18 * scale, z], 0.18 * scale, 0.62 * scale, 24, shirt);
+      addCylinder(b, [x - 0.25 * scale, y + 1.14 * scale, z], 0.038 * scale, 0.58 * scale, 16, skin);
+      addCylinder(b, [x + 0.25 * scale, y + 1.14 * scale, z], 0.038 * scale, 0.58 * scale, 16, skin);
+      addCylinder(b, [x, y + 1.51 * scale, z], 0.055 * scale, 0.10 * scale, 16, skin);
+      addSphere(b, [x, y + 1.65 * scale, z], 0.15 * scale, 18, 24, skin);
+    }
+
+    function addCar(b, x, y, z) {
+      const body = [0.66, 0.08, 0.06];
+      const roof = [0.58, 0.07, 0.06];
+      const glass = [0.05, 0.17, 0.22];
+      const wheel = [0.025, 0.025, 0.025];
+      const hub = [0.58, 0.58, 0.54];
+
+      addBox(b, [x, y + 0.55, z], [4.5, 0.78, 1.8], body);
+      addBox(b, [x + 0.32, y + 1.14, z], [2.05, 0.76, 1.45], roof);
+      addBox(b, [x + 0.32, y + 1.24, z - 0.75], [1.55, 0.34, 0.07], glass);
+      addBox(b, [x + 0.32, y + 1.24, z + 0.75], [1.55, 0.34, 0.07], glass);
+      addBox(b, [x + 1.38, y + 1.18, z], [0.07, 0.38, 1.04], glass);
+      addBox(b, [x - 0.80, y + 1.18, z], [0.07, 0.34, 1.00], glass);
+
+      for (const wheelX of [x - 1.45, x + 1.45]) {
+        for (const wheelZ of [z - 0.94, z + 0.94]) {
+          addSphere(b, [wheelX, y + 0.33, wheelZ], 0.34, 12, 18, wheel);
+          addSphere(b, [wheelX, y + 0.33, wheelZ], 0.16, 8, 12, hub);
+        }
+      }
+    }
+
+    function addSemiTruck(b, x, y, z) {
+      const cab = [0.12, 0.31, 0.58];
+      const trailer = [0.82, 0.84, 0.82];
+      const trim = [0.18, 0.21, 0.22];
+      const glass = [0.05, 0.16, 0.23];
+      const wheel = [0.02, 0.02, 0.02];
+      const hub = [0.62, 0.62, 0.58];
+
+      addBox(b, [x + 2.75, y + 2.05, z], [12.5, 3.2, 2.5], trailer);
+      addBox(b, [x - 6.55, y + 1.75, z], [4.5, 3.3, 2.6], cab);
+      addBox(b, [x - 8.84, y + 1.18, z], [0.10, 1.20, 2.05], trim);
+      addBox(b, [x - 8.85, y + 2.55, z], [0.11, 0.74, 2.12], glass);
+      addBox(b, [x - 6.55, y + 2.48, z - 1.33], [1.55, 0.62, 0.08], glass);
+      addBox(b, [x - 6.55, y + 2.48, z + 1.33], [1.55, 0.62, 0.08], glass);
+      addBox(b, [x + 2.75, y + 3.76, z], [12.7, 0.18, 2.7], trim);
+
+      for (const wheelX of [x - 8.0, x - 5.2, x - 1.3, x + 3.2, x + 7.2]) {
+        for (const wheelZ of [z - 1.45, z + 1.45]) {
+          addSphere(b, [wheelX, y + 0.55, wheelZ], 0.56, 12, 18, wheel);
+          addSphere(b, [wheelX, y + 0.55, wheelZ], 0.24, 8, 12, hub);
+        }
+      }
+    }
+
+    function addFourStoryBuilding(b, x, y, z) {
+      const wall = [0.58, 0.61, 0.57];
+      const roof = [0.20, 0.23, 0.22];
+      const glass = [0.09, 0.25, 0.31];
+      const door = [0.16, 0.11, 0.08];
+      const width = 18;
+      const depth = 14;
+      const height = 14;
+
+      addBox(b, [x, y + height * 0.5, z], [width, height, depth], wall);
+      addBox(b, [x, y + height + 0.16, z], [width + 0.5, 0.32, depth + 0.5], roof);
+      addBox(b, [x, y + 1.05, z - depth * 0.5 - 0.06], [1.7, 2.1, 0.12], door);
+
+      for (let floor = 0; floor < 4; floor += 1) {
+        const windowY = y + 2.55 + floor * 3.05;
+        for (let col = -2; col <= 2; col += 1) {
+          const windowX = x + col * 3.0;
+          addBox(b, [windowX, windowY, z - depth * 0.5 - 0.05], [1.15, 0.95, 0.10], glass);
+          addBox(b, [windowX, windowY, z + depth * 0.5 + 0.05], [1.15, 0.95, 0.10], glass);
+        }
+      }
+
+      for (let floor = 0; floor < 4; floor += 1) {
+        const windowY = y + 2.55 + floor * 3.05;
+        for (let col = -1; col <= 1; col += 1) {
+          const windowZ = z + col * 3.4;
+          addBox(b, [x - width * 0.5 - 0.05, windowY, windowZ], [0.10, 0.95, 1.15], glass);
+          addBox(b, [x + width * 0.5 + 0.05, windowY, windowZ], [0.10, 0.95, 1.15], glass);
+        }
+      }
+    }
+
+    function addBoeing777(b, x, y, z) {
+      const length = 74;
+      const wingspan = 65;
+      const tailHeight = 18.5;
+      const fuselageRadius = 3.1;
+      const fuselageY = y + 4.1;
+      const fuselage = [0.82, 0.84, 0.83];
+      const wing = [0.62, 0.65, 0.65];
+      const blue = [0.08, 0.24, 0.42];
+      const glass = [0.04, 0.10, 0.14];
+      const engine = [0.18, 0.20, 0.21];
+      const wheel = [0.018, 0.018, 0.018];
+
+      addCylinderX(b, [x, fuselageY, z], fuselageRadius, length, 40, fuselage);
+      addSphere(b, [x + length * 0.5, fuselageY, z], fuselageRadius, 18, 28, fuselage);
+      addSphere(b, [x - length * 0.5, fuselageY, z], fuselageRadius * 0.72, 16, 24, fuselage);
+      addBox(b, [x + 2, fuselageY - 0.35, z - fuselageRadius - 0.04], [length * 0.78, 0.34, 0.08], blue);
+      addBox(b, [x + 2, fuselageY - 0.35, z + fuselageRadius + 0.04], [length * 0.78, 0.34, 0.08], blue);
+
+      for (let i = -24; i <= 28; i += 4) {
+        addBox(b, [x + i, fuselageY + 0.95, z - fuselageRadius - 0.05], [0.62, 0.28, 0.10], glass);
+        addBox(b, [x + i, fuselageY + 0.95, z + fuselageRadius + 0.05], [0.62, 0.28, 0.10], glass);
+      }
+
+      for (const sign of [-1, 1]) {
+        const rootFront = [x + 8.0, fuselageY - 0.05, z + sign * 2.5];
+        const rootBack = [x - 8.0, fuselageY - 0.05, z + sign * 2.8];
+        const tipBack = [x - 18.0, fuselageY - 0.34, z + sign * (wingspan * 0.5)];
+        const tipFront = [x - 6.0, fuselageY - 0.34, z + sign * (wingspan * 0.5)];
+        addQuadSurface(b, rootFront, rootBack, tipBack, tipFront, wing, [0, 1, 0]);
+
+        addCylinderX(b, [x - 0.5, fuselageY - 1.9, z + sign * 13.0], 1.22, 3.7, 24, engine);
+
+        const tailRootFront = [x - length * 0.5 + 16, fuselageY + 2.1, z + sign * 1.7];
+        const tailRootBack = [x - length * 0.5 + 7, fuselageY + 2.1, z + sign * 1.8];
+        const tailTipBack = [x - length * 0.5 + 3.5, fuselageY + 1.85, z + sign * 10.0];
+        const tailTipFront = [x - length * 0.5 + 11.0, fuselageY + 1.85, z + sign * 10.0];
+        addQuadSurface(b, tailRootFront, tailRootBack, tailTipBack, tailTipFront, wing, [0, 1, 0]);
+      }
+
+      addTriangleSurface(
+        b,
+        [x - length * 0.5 + 3.2, fuselageY + 2.2, z],
+        [x - length * 0.5 + 12.4, y + tailHeight, z],
+        [x - length * 0.5 + 17.0, fuselageY + 1.1, z],
+        blue,
+        [0, 0, 1]
+      );
+
+      for (const gear of [
+        { gx: x + 26, gz: z, radius: 0.34 },
+        { gx: x - 5.5, gz: z - 2.1, radius: 0.46 },
+        { gx: x - 5.5, gz: z + 2.1, radius: 0.46 }
+      ]) {
+        addCylinder(b, [gear.gx, y + 1.12, gear.gz], 0.11, 1.75, 10, engine);
+        addSphere(b, [gear.gx, y + gear.radius, gear.gz], gear.radius, 10, 14, wheel);
+      }
+    }
+
+    function addBox(b, center, size, color) {
+      const [cx, cy, cz] = center;
+      const [sx, sy, sz] = size.map((v) => v * 0.5);
+      const faces = [
+        { n: [1, 0, 0], v: [[sx, -sy, -sz], [sx, sy, -sz], [sx, sy, sz], [sx, -sy, sz]] },
+        { n: [-1, 0, 0], v: [[-sx, -sy, sz], [-sx, sy, sz], [-sx, sy, -sz], [-sx, -sy, -sz]] },
+        { n: [0, 1, 0], v: [[-sx, sy, -sz], [-sx, sy, sz], [sx, sy, sz], [sx, sy, -sz]] },
+        { n: [0, -1, 0], v: [[-sx, -sy, sz], [-sx, -sy, -sz], [sx, -sy, -sz], [sx, -sy, sz]] },
+        { n: [0, 0, 1], v: [[sx, -sy, sz], [sx, sy, sz], [-sx, sy, sz], [-sx, -sy, sz]] },
+        { n: [0, 0, -1], v: [[-sx, -sy, -sz], [-sx, sy, -sz], [sx, sy, -sz], [sx, -sy, -sz]] }
+      ];
+
+      for (const face of faces) {
+        const vertices = face.v.map((p) => [p[0] + cx, p[1] + cy, p[2] + cz]);
+        pushTri(b, vertices[0], vertices[1], vertices[2], face.n, face.n, face.n, color, color, color);
+        pushTri(b, vertices[0], vertices[2], vertices[3], face.n, face.n, face.n, color, color, color);
+      }
+    }
+
+    function addCylinder(b, center, radius, height, segments, color) {
+      const [cx, cy, cz] = center;
+      const y0 = cy - height * 0.5;
+      const y1 = cy + height * 0.5;
+
+      for (let i = 0; i < segments; i += 1) {
+        const a0 = (i / segments) * Math.PI * 2;
+        const a1 = ((i + 1) / segments) * Math.PI * 2;
+        const n0 = [Math.cos(a0), 0, Math.sin(a0)];
+        const n1 = [Math.cos(a1), 0, Math.sin(a1)];
+        const p00 = [cx + n0[0] * radius, y0, cz + n0[2] * radius];
+        const p01 = [cx + n1[0] * radius, y0, cz + n1[2] * radius];
+        const p10 = [cx + n0[0] * radius, y1, cz + n0[2] * radius];
+        const p11 = [cx + n1[0] * radius, y1, cz + n1[2] * radius];
+
+        pushTri(b, p00, p10, p11, n0, n0, n1, color, color, color);
+        pushTri(b, p00, p11, p01, n0, n1, n1, color, color, color);
+        pushTri(b, [cx, y1, cz], p10, p11, [0, 1, 0], [0, 1, 0], [0, 1, 0], color, color, color);
+        pushTri(b, [cx, y0, cz], p01, p00, [0, -1, 0], [0, -1, 0], [0, -1, 0], color, color, color);
+      }
+    }
+
+    function addCylinderX(b, center, radius, length, segments, color) {
+      const [cx, cy, cz] = center;
+      const x0 = cx - length * 0.5;
+      const x1 = cx + length * 0.5;
+
+      for (let i = 0; i < segments; i += 1) {
+        const a0 = (i / segments) * Math.PI * 2;
+        const a1 = ((i + 1) / segments) * Math.PI * 2;
+        const n0 = [0, Math.cos(a0), Math.sin(a0)];
+        const n1 = [0, Math.cos(a1), Math.sin(a1)];
+        const p00 = [x0, cy + n0[1] * radius, cz + n0[2] * radius];
+        const p01 = [x0, cy + n1[1] * radius, cz + n1[2] * radius];
+        const p10 = [x1, cy + n0[1] * radius, cz + n0[2] * radius];
+        const p11 = [x1, cy + n1[1] * radius, cz + n1[2] * radius];
+
+        pushTri(b, p00, p10, p11, n0, n0, n1, color, color, color);
+        pushTri(b, p00, p11, p01, n0, n1, n1, color, color, color);
+        pushTri(b, [x1, cy, cz], p10, p11, [1, 0, 0], [1, 0, 0], [1, 0, 0], color, color, color);
+        pushTri(b, [x0, cy, cz], p01, p00, [-1, 0, 0], [-1, 0, 0], [-1, 0, 0], color, color, color);
+      }
+    }
+
+    function addQuadSurface(b, p0, p1, p2, p3, color, normal) {
+      pushTri(b, p0, p1, p2, normal, normal, normal, color, color, color);
+      pushTri(b, p0, p2, p3, normal, normal, normal, color, color, color);
+    }
+
+    function addTriangleSurface(b, p0, p1, p2, color, normal) {
+      pushTri(b, p0, p1, p2, normal, normal, normal, color, color, color);
+    }
+
+    function addSphere(b, center, radius, latSegments, lonSegments, color) {
+      const point = (lat, lon) => {
+        const theta = (lat / latSegments) * Math.PI;
+        const phi = (lon / lonSegments) * Math.PI * 2;
+        const s = Math.sin(theta);
+        const n = [Math.cos(phi) * s, Math.cos(theta), Math.sin(phi) * s];
+        return {
+          p: [center[0] + n[0] * radius, center[1] + n[1] * radius, center[2] + n[2] * radius],
+          n
+        };
+      };
+
+      for (let lat = 0; lat < latSegments; lat += 1) {
+        for (let lon = 0; lon < lonSegments; lon += 1) {
+          const a = point(lat, lon);
+          const b0 = point(lat + 1, lon);
+          const c = point(lat + 1, lon + 1);
+          const d = point(lat, lon + 1);
+          pushTri(b, a.p, b0.p, c.p, a.n, b0.n, c.n, color, color, color);
+          pushTri(b, a.p, c.p, d.p, a.n, c.n, d.n, color, color, color);
+        }
+      }
+    }
+
+    function createBuilder() {
+      return { positions: [], normals: [], colors: [] };
+    }
+
+    function pushVertex(b, position, normal, color) {
+      b.positions.push(position[0], position[1], position[2]);
+      b.normals.push(normal[0], normal[1], normal[2]);
+      b.colors.push(color[0], color[1], color[2]);
+    }
+
+    function pushTri(b, a, c, d, na, nc, nd, ca, cc, cd) {
+      pushVertex(b, a, na, ca);
+      pushVertex(b, c, nc, cc);
+      pushVertex(b, d, nd, cd);
+    }
+
+    function addLine(b, a, c, color) {
+      pushVertex(b, a, [0, 1, 0], color);
+      pushVertex(b, c, [0, 1, 0], color);
+    }
+
+    function uploadMesh(mesh) {
+      return {
+        count: mesh.positions.length / 3,
+        position: uploadArray(mesh.positions),
+        normal: uploadArray(mesh.normals),
+        color: uploadArray(mesh.colors)
+      };
+    }
+
+    function uploadArray(values) {
+      const buffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(values), gl.STATIC_DRAW);
+      return buffer;
+    }
+
+    function drawUploadedMesh(mesh, mode) {
+      bindAttribute(mesh.position, locations.position, 3);
+      bindAttribute(mesh.normal, locations.normal, 3);
+      bindAttribute(mesh.color, locations.color, 3);
+      gl.drawArrays(mode, 0, mesh.count);
+    }
+
+    function bindAttribute(buffer, location, size) {
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.enableVertexAttribArray(location);
+      gl.vertexAttribPointer(location, size, gl.FLOAT, false, 0, 0);
+    }
+
+    function createProgram(vertexSource, fragmentSource) {
+      const vertexShader = createShader(gl.VERTEX_SHADER, vertexSource);
+      const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentSource);
+      const shaderProgram = gl.createProgram();
+      gl.attachShader(shaderProgram, vertexShader);
+      gl.attachShader(shaderProgram, fragmentShader);
+      gl.linkProgram(shaderProgram);
+      if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+        throw new Error(gl.getProgramInfoLog(shaderProgram) || "Program link failed");
+      }
+      return shaderProgram;
+    }
+
+    function createShader(type, source) {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        throw new Error(gl.getShaderInfoLog(shader) || "Shader compile failed");
+      }
+      return shader;
+    }
+
+    function mat4() {
+      return new Float32Array(16);
+    }
+
+    function perspective(out, fovy, aspect, near, far) {
+      const f = 1.0 / Math.tan(fovy / 2);
+      const nf = 1 / (near - far);
+      out[0] = f / aspect;
+      out[1] = 0;
+      out[2] = 0;
+      out[3] = 0;
+      out[4] = 0;
+      out[5] = f;
+      out[6] = 0;
+      out[7] = 0;
+      out[8] = 0;
+      out[9] = 0;
+      out[10] = (far + near) * nf;
+      out[11] = -1;
+      out[12] = 0;
+      out[13] = 0;
+      out[14] = 2 * far * near * nf;
+      out[15] = 0;
+    }
+
+    function lookAt(out, cameraEye, center, up) {
+      const zAxis = normalize([
+        cameraEye[0] - center[0],
+        cameraEye[1] - center[1],
+        cameraEye[2] - center[2]
+      ]);
+      const xAxis = normalize(cross(up, zAxis));
+      const yAxis = cross(zAxis, xAxis);
+
+      out[0] = xAxis[0];
+      out[1] = yAxis[0];
+      out[2] = zAxis[0];
+      out[3] = 0;
+      out[4] = xAxis[1];
+      out[5] = yAxis[1];
+      out[6] = zAxis[1];
+      out[7] = 0;
+      out[8] = xAxis[2];
+      out[9] = yAxis[2];
+      out[10] = zAxis[2];
+      out[11] = 0;
+      out[12] = -dot(xAxis, cameraEye);
+      out[13] = -dot(yAxis, cameraEye);
+      out[14] = -dot(zAxis, cameraEye);
+      out[15] = 1;
+    }
+
+    function multiply(out, a, b) {
+      const a00 = a[0], a01 = a[1], a02 = a[2], a03 = a[3];
+      const a10 = a[4], a11 = a[5], a12 = a[6], a13 = a[7];
+      const a20 = a[8], a21 = a[9], a22 = a[10], a23 = a[11];
+      const a30 = a[12], a31 = a[13], a32 = a[14], a33 = a[15];
+
+      let b0 = b[0], b1 = b[1], b2 = b[2], b3 = b[3];
+      out[0] = b0 * a00 + b1 * a10 + b2 * a20 + b3 * a30;
+      out[1] = b0 * a01 + b1 * a11 + b2 * a21 + b3 * a31;
+      out[2] = b0 * a02 + b1 * a12 + b2 * a22 + b3 * a32;
+      out[3] = b0 * a03 + b1 * a13 + b2 * a23 + b3 * a33;
+
+      b0 = b[4]; b1 = b[5]; b2 = b[6]; b3 = b[7];
+      out[4] = b0 * a00 + b1 * a10 + b2 * a20 + b3 * a30;
+      out[5] = b0 * a01 + b1 * a11 + b2 * a21 + b3 * a31;
+      out[6] = b0 * a02 + b1 * a12 + b2 * a22 + b3 * a32;
+      out[7] = b0 * a03 + b1 * a13 + b2 * a23 + b3 * a33;
+
+      b0 = b[8]; b1 = b[9]; b2 = b[10]; b3 = b[11];
+      out[8] = b0 * a00 + b1 * a10 + b2 * a20 + b3 * a30;
+      out[9] = b0 * a01 + b1 * a11 + b2 * a21 + b3 * a31;
+      out[10] = b0 * a02 + b1 * a12 + b2 * a22 + b3 * a32;
+      out[11] = b0 * a03 + b1 * a13 + b2 * a23 + b3 * a33;
+
+      b0 = b[12]; b1 = b[13]; b2 = b[14]; b3 = b[15];
+      out[12] = b0 * a00 + b1 * a10 + b2 * a20 + b3 * a30;
+      out[13] = b0 * a01 + b1 * a11 + b2 * a21 + b3 * a31;
+      out[14] = b0 * a02 + b1 * a12 + b2 * a22 + b3 * a32;
+      out[15] = b0 * a03 + b1 * a13 + b2 * a23 + b3 * a33;
+    }
+
+    function midpoint(a, b) {
+      return [
+        (a[0] + b[0]) * 0.5,
+        (a[1] + b[1]) * 0.5,
+        (a[2] + b[2]) * 0.5
+      ];
+    }
+
+    function cross(a, b) {
+      return [
+        a[1] * b[2] - a[2] * b[1],
+        a[2] * b[0] - a[0] * b[2],
+        a[0] * b[1] - a[1] * b[0]
+      ];
+    }
+
+    function dot(a, b) {
+      return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+    }
+
+    function normalize(v) {
+      const len = Math.hypot(v[0], v[1], v[2]) || 1;
+      return [v[0] / len, v[1] / len, v[2] / len];
+    }
+
+    function mix(a, b, t) {
+      return [
+        mixValue(a[0], b[0], t),
+        mixValue(a[1], b[1], t),
+        mixValue(a[2], b[2], t)
+      ];
+    }
+
+    function mixValue(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    function hash(n) {
+      return fract(Math.sin(n * 12.9898) * 43758.5453);
+    }
+
+    function fract(value) {
+      return value - Math.floor(value);
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function radians(degrees) {
+      return degrees * Math.PI / 180;
+    }
+
+    function setActiveView(viewName) {
+      activeView = viewName;
+      document.querySelectorAll("[data-view]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.view === activeView);
+      });
+    }
+  </script>
+</body>
+</html>
