@@ -6,6 +6,7 @@ title: Hobby
 # Hobby
 
 ## Articles
+  - [If you put together one book for every person alive, how large will be the pile?](./book-cone/index.html)
   - [Weighted squates vs Body Weight Single legged squates](./weighted_squates_vs_body_weight_single_legged_squates.md)
   - [Proof of Godel's incompleteness Theorem](./proof_of_godels_incompleteness_theorem.md)
   - [AI and Art](./ai_and_art.md)
