@@ -23,6 +23,7 @@ Common edits
 
 Local preview
 - `serve.sh` runs `bundle exec jekyll serve --livereload` with local gem paths set. Gem dependencies are in `Gemfile` and `Gemfile.lock`.
+- For local verification, use OS-provided Bundler with repo-local gems: from the repo root run `bundle exec jekyll build --destination /tmp/prem314.github.io-build`. The `.gems/`, `.bundle/`, `_site/`, and `.jekyll-cache/` paths are ignored and should stay untracked.
 
 LaTeX workflow
 - After changing any `.tex` file, compile the corresponding PDF in the same directory before finishing.
