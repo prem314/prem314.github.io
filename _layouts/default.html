@@ -64,9 +64,11 @@
     </header>
     <main>
         {{ content }}
+        {% unless page.comments == false %}
           <section class="comments">
             {% include giscus.html %}
           </section>
+        {% endunless %}
     </main>
     <footer>
         <p>&copy; 2024 Prem's Website</p>
