@@ -104,6 +104,9 @@ Thumbs.db
 .codex
 .codex/
 
+# Local agent instructions
+/AGENTS.md
+
 # LaTeX build artifacts
 *.aux
 *.bbl
