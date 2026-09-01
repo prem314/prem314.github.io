@@ -164,3 +164,6 @@ captures/
 *.idsig
 local.properties
 app/release/
+
+# Temporary directories
+tmp/
